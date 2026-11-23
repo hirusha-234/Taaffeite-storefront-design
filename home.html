@@ -1,0 +1,693 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home | Taaffeite Origin</title>
+    <meta
+      name="description"
+      content="Rare, ethically sourced gemstones from Sri Lanka and beyond. Buy certified stones directly, join live auctions, or request private access to exceptional specimens."
+    />
+    <link rel="icon" type="image/png" href="assets/taaffeite-origin-logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&amp;family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,600&amp;display=swap" />
+    
+    <link rel="stylesheet" href="styles.css" />
+    <script>
+      try {
+        if (localStorage.getItem("taaffeite-origin-theme") === "dark") document.documentElement.dataset.theme = "dark";
+      } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <div id="root">
+      <div class="archive-site" data-theme="light">
+        <header class="sf-header sf-header--over">
+          <div class="sf-header-inner">
+            <button
+              class="sf-text-btn sf-menu-toggle"
+              type="button"
+              aria-expanded="false"
+              aria-controls="sf-mobile-menu"
+              aria-label="Open menu"
+            >
+              Menu
+            </button>
+            <nav class="sf-nav" aria-label="Main navigation">
+              <a href="miners-path.html">Miner's Path</a><a href="buy-now.html">Buy Now</a
+              ><a href="auctions.html">Auctions</a><a href="private-collection.html">Private Collection</a
+              ><a href="contact.html">Contact</a>
+            </nav>
+            <a class="sf-brand sf-script-mark" href="home.html" aria-label="Taaffeite Origin home"
+              ><img class="sf-logo-image" src="assets/taaffeite-origin-logo.png" alt="" /></a>
+            <div class="sf-actions">
+              <a class="sf-text-btn sf-account-link" href="account.html" aria-label="User login" title="User login"
+                >Account</a
+              ><button class="sf-text-btn sf-cart-toggle" type="button" aria-label="Open cart, 1 items" title="Cart">
+                Cart ( 1 )</button
+              ><label class="sf-currency"
+                ><span class="sf-visually-hidden">Currency</span
+                ><select aria-label="Currency">
+                  <option value="USD" selected="">USD</option>
+                  <option value="GBP">GBP</option>
+                  <option value="LKR">LKR</option>
+                </select></label
+              ><button
+                class="sf-text-btn sf-theme-toggle"
+                type="button"
+                aria-pressed="false"
+                aria-label="Switch to dark theme"
+                title="Switch to dark theme"
+              >
+                Dark
+              </button>
+            </div>
+          </div>
+        </header>
+        <main class="sf-home">
+          <section class="sf-splash" aria-labelledby="hero-title">
+            <img
+              class="sf-splash-media"
+              alt="Violet taaffeite gemstones glowing against a dark background"
+              fetchpriority="high"
+              src="assets/taaffeite-hero.png"
+            />
+            <div class="sf-splash-copy">
+              <p class="sf-kicker">Taaffeite Origin · Sri Lanka</p>
+              <h1 id="hero-title" class="sf-splash-mark">A WORLD OF RARE GEMS</h1>
+              <p class="sf-splash-line">
+                <span>Rare by nature. Exceptional by origin.</span>
+              </p>
+              <a class="sf-btn sf-btn--on-dark sf-splash-cta" href="buy-now.html">Explore the collection</a>
+            </div>
+          </section>
+          <section class="sf-signature" id="collections" aria-label="Everyday gemstone collection">
+            <header class="sf-home-heading" data-reveal="true">
+              <p class="sf-kicker">Our everyday pieces</p>
+              <h2>DISCOVER TAAFFEITE</h2>
+            </header>
+            <a class="sf-card sf-home-gem" href="product.html" data-reveal="true" style="--reveal-i: 0"
+              ><span class="sf-card-media"
+                ><img
+                  alt="Blue sapphire in soft natural light"
+                  loading="eager"
+                  src="assets/products/DSC01864.webp" /></span
+              ><span class="sf-card-body"
+                ><span class="sf-card-name ss-blue-sapphire">Blue Sapphire</span><span class="sf-card-meta">Sri Lanka · 3.42 ct</span></span
+            ></a>
+            <a class="sf-card sf-home-gem" href="product.html" data-reveal="true" style="--reveal-i: 1"
+              ><span class="sf-card-media"
+                ><img
+                  alt="Emerald gemstone on a pale background"
+                  loading="lazy"
+                  src="assets/products/DSC01932.webp" /></span
+              ><span class="sf-card-body"
+                ><span class="sf-card-name">Colombian Emerald</span
+                ><span class="sf-card-meta">Colombia · 2.18 ct</span></span
+            ></a>
+            <a class="sf-card sf-home-gem" href="product.html" data-reveal="true" style="--reveal-i: 2"
+              ><span class="sf-card-media"
+                ><img
+                  alt="Violet amethyst gemstone"
+                  loading="lazy"
+                  src="assets/products/DSC01699.webp" /></span
+              ><span class="sf-card-body"
+                ><span class="sf-card-name">Amethyst</span><span class="sf-card-meta">Brazil · 5.20 ct</span></span
+            ></a>
+            <a class="sf-card sf-home-gem" href="product.html" data-reveal="true" style="--reveal-i: 3"
+              ><span class="sf-card-media"
+                ><img
+                  alt="Australian opal catching the light"
+                  loading="lazy"
+                  src="assets/products/DSC01825.webp" /></span
+              ><span class="sf-card-body"
+                ><span class="sf-card-name">Australian Opal</span><span class="sf-card-meta">Australia · 4.60 ct</span></span
+            ></a>
+          </section>
+          <section class="sf-section sf-wrap" aria-labelledby="featured-title">
+            <div class="sf-section-head" data-reveal="true">
+              <div>
+                <p class="sf-eyebrow">Discover all current listings</p>
+                <h2 id="featured-title">FEATURED STONES</h2>
+              </div>
+              <a class="sf-arrow-link" href="buy-now.html"
+                >View all
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-arrow-right"
+                  aria-hidden="true"
+                >
+                  <path d="M5 12h14"></path>
+                  <path d="m12 5 7 7-7 7"></path></svg
+              ></a>
+            </div>
+            <div class="sf-feature">
+              <div class="sf-feature-item" data-reveal="true" style="--reveal-i: 0">
+                <a class="sf-card sf-card--lead" href="product.html"
+                  ><span class="sf-card-media"
+                    ><img
+                      alt="Blue gemstone specimen on a light surface"
+                      loading="eager"
+                      src="assets/products/DSC01864.webp" /></span
+                  ><span class="sf-card-body"
+                    ><span class="sf-card-name ss-blue-sapphire">Blue Sapphire</span><span class="sf-card-meta">Sri Lanka · 3.42 ct</span
+                    ><span class="sf-card-price"><strong>$5,400</strong></span></span
+                  ></a
+                >
+              </div>
+              <div class="sf-feature-item" data-reveal="true" style="--reveal-i: 1">
+                <a class="sf-card" href="product.html"
+                  ><span class="sf-card-media"
+                    ><img
+                      alt="Green gemstone specimen on a pale background"
+                      loading="lazy"
+                      src="assets/products/DSC01932.webp"
+                    /><span class="sf-badge sf-badge--accent" title="Festive offer · 10% off"
+                      >Festive offer · 10% off</span
+                    ></span
+                  ><span class="sf-card-body"
+                    ><span class="sf-card-name">Colombian Emerald</span
+                    ><span class="sf-card-meta">Colombia · 2.18 ct</span
+                    ><span class="sf-card-price"><del>$3,900</del><strong>$3,510</strong></span></span
+                  ></a
+                >
+              </div>
+              <div class="sf-feature-item" data-reveal="true" style="--reveal-i: 2">
+                <a class="sf-card" href="product.html"
+                  ><span class="sf-card-media"
+                    ><img
+                      alt="Violet gemstone specimen"
+                      loading="lazy"
+                      src="assets/products/DSC01699.webp" /></span
+                  ><span class="sf-card-body"
+                    ><span class="sf-card-name">Amethyst</span><span class="sf-card-meta">Brazil · 5.20 ct</span
+                    ><span class="sf-card-price"><strong>$920</strong></span></span
+                  ></a
+                >
+              </div>
+              <div class="sf-feature-item" data-reveal="true" style="--reveal-i: 3">
+                <a class="sf-card" href="product.html"
+                  ><span class="sf-card-media"
+                    ><img
+                      alt="Faceted gemstone catching the light"
+                      loading="lazy"
+                      src="assets/products/DSC01825.webp"
+                    /><span class="sf-badge sf-badge--accent" title="Collector week · 15% off"
+                      >Collector week · 15% off</span
+                    ></span
+                  ><span class="sf-card-body"
+                    ><span class="sf-card-name">Australian Opal</span
+                    ><span class="sf-card-meta">Australia · 4.60 ct</span
+                    ><span class="sf-card-price"><del>$2,800</del><strong>$2,380</strong></span></span
+                  ></a
+                >
+              </div>
+            </div>
+          </section>
+          <section class="sf-private-teaser" aria-labelledby="private-teaser-title">
+            <div class="sf-wrap sf-private-teaser-inner">
+              <div class="sf-private-teaser-copy">
+                <p class="sf-private-teaser-kicker"><span>Private collection</span></p>
+                <h2 id="private-teaser-title">A GLIMPSE BEYOND THE SHOWCASE</h2>
+                <p>Discover one of the rare stones reserved for private viewing. Open the vault for a closer look, then request an introduction to the collection.</p>
+                <div
+                  class="sf-private-progress"
+                  role="progressbar"
+                  aria-label="Private preview discovery"
+                  aria-valuemin="0"
+                  aria-valuemax="1"
+                  aria-valuenow="0"
+                  aria-valuetext="Preview not yet revealed"
+                  data-private-progress
+                ><span data-private-progress-bar></span></div>
+                <p class="sf-private-teaser-note">Illustrative preview. Stone details and availability are subject to confirmation.</p>
+              </div>
+              <details class="sf-private-vault" data-private-vault>
+                <summary>
+                  <span class="sf-private-vault-symbol" aria-hidden="true">
+                    <svg viewBox="0 0 48 48" fill="none">
+                      <path d="M24 4 42 17 24 44 6 17 24 4Z" />
+                      <path d="M6 17h36M16 17l8 27 8-27M16 17l8-13 8 13" />
+                    </svg>
+                  </span>
+                  <span class="sf-private-vault-prompt">
+                    <small>Discovery 01 · Private preview</small>
+                    <strong data-private-vault-label>Reveal the hidden stone</strong>
+                  </span>
+                </summary>
+                <div class="sf-private-vault-reveal">
+                  <figure>
+                    <img
+                      src="assets/products/DSC01722.webp"
+                      alt="Collector Taaffeite from the illustrative private collection preview"
+                      loading="lazy"
+                    />
+                    <figcaption>Private collection preview</figcaption>
+                  </figure>
+                  <div class="sf-private-vault-details">
+                    <p class="sf-private-vault-kicker">Discovery complete</p>
+                    <h3>Collector Taaffeite</h3>
+                    <p>Sri Lanka <span aria-hidden="true">·</span> 0.84 ct</p>
+                    <a class="sf-private-join" href="private-collection.html">
+                      Request private access
+                      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" /></svg>
+                    </a>
+                  </div>
+                </div>
+              </details>
+            </div>
+          </section>
+          <section class="sf-split" aria-labelledby="split-title">
+            <div class="sf-split-half sf-split-quote" data-reveal="true">
+              <p class="sf-kicker">The Taaffeite Way</p>
+              <h2 id="split-title">Every stone begins somewhere</h2>
+            </div>
+            <div class="sf-split-half sf-split-visual" data-reveal="true" style="--reveal-i: 1">
+              <a class="sf-split-feature sf-img" href="article.html" aria-label="Read the featured story, A conversation that became a vision">
+                <img
+                  alt="Faceted violet gemstones against a dark mineral background"
+                  loading="lazy"
+                  src="assets/taaffeite-home-hero.jpg"
+                />
+                <span class="sf-split-feature-copy">
+                  <span class="sf-kicker">Featured story · Our story</span>
+                  <span class="sf-split-feature-title">A conversation that became a vision.</span>
+                  <span class="sf-split-feature-link">Read our story
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none">
+                      <path d="M5 12h14m-6-6 6 6-6 6" />
+                    </svg>
+                  </span>
+                </span>
+              </a>
+            </div>
+          </section>
+          <section class="sf-intro" id="origin" aria-labelledby="intro-title">
+            <div class="sf-wrap sf-intro-grid">
+              <div class="sf-intro-brandlockup" data-reveal="true">
+                <h2 id="intro-title" class="sf-intro-name">
+                  <span class="sf-intro-wordmark">Taaffeite Origin</span>
+                  <span class="sf-intro-gem" aria-hidden="true">
+                    <img src="assets/products/DSC01964.webp" alt="" loading="lazy" />
+                  </span>
+                  <span class="sf-intro-since">Since 2026</span>
+                </h2>
+                <p class="sf-intro-tag">
+                  <span>Rare Gemstones</span>
+                  <span>ROOTED IN SRI LANKA</span>
+                </p>
+              </div>
+              <div class="sf-intro-lead" data-reveal="true" style="--reveal-i: 2">
+                <p>
+                  What began as a simple conversation between two friends evolved into a vision: to modernise an
+                  outdated market and create a platform where buyers can explore and acquire gemstones from the comfort
+                  of their homes, while still accessing stones at their true value.
+                </p>
+                <a class="sf-arrow-link" href="miners-path.html"
+                  >Read Miner's Path
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-arrow-right"
+                    aria-hidden="true"
+                  >
+                    <path d="M5 12h14"></path>
+                    <path d="m12 5 7 7-7 7"></path></svg
+                ></a>
+              </div>
+            </div>
+          </section>
+          <section class="sf-home-proof sf-home-testimonials" aria-labelledby="testimonials-title">
+            <div class="sf-wrap sf-home-proof-inner">
+              <header class="sf-home-proof-heading">
+                <p class="sf-eyebrow">Customer testimonials</p>
+                <h2 id="testimonials-title">What our collectors say</h2>
+              </header>
+              <div class="sf-testimonial-carousel" data-testimonial-carousel>
+                <button class="sf-testimonial-arrow" type="button" data-testimonial-prev aria-label="Previous testimonial">
+                  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m15 18-6-6 6-6" /></svg>
+                </button>
+                <div class="sf-testimonial-window" data-testimonial-window aria-live="polite" aria-atomic="true">
+                  <blockquote class="sf-testimonial-feature" data-testimonial-slide>
+                    <p>Approved customer feedback will appear here.</p>
+                    <footer class="sf-testimonial-attribution">
+                      <strong>Customer name</strong>
+                      <span>Sample testimonial</span>
+                    </footer>
+                  </blockquote>
+                  <blockquote class="sf-testimonial-feature" data-testimonial-slide hidden>
+                    <p>Approved customer feedback will appear here.</p>
+                    <footer class="sf-testimonial-attribution">
+                      <strong>Customer name</strong>
+                      <span>Sample testimonial</span>
+                    </footer>
+                  </blockquote>
+                  <blockquote class="sf-testimonial-feature" data-testimonial-slide hidden>
+                    <p>Approved customer feedback will appear here.</p>
+                    <footer class="sf-testimonial-attribution">
+                      <strong>Customer name</strong>
+                      <span>Sample testimonial</span>
+                    </footer>
+                  </blockquote>
+                </div>
+                <button class="sf-testimonial-arrow" type="button" data-testimonial-next aria-label="Next testimonial">
+                  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m9 18 6-6-6-6" /></svg>
+                </button>
+              </div>
+              <div class="sf-testimonial-dots" role="group" aria-label="Choose a testimonial">
+                <button class="sf-testimonial-dot" type="button" data-testimonial-dot aria-label="Show testimonial 1 of 3" aria-current="true"></button>
+                <button class="sf-testimonial-dot" type="button" data-testimonial-dot aria-label="Show testimonial 2 of 3"></button>
+                <button class="sf-testimonial-dot" type="button" data-testimonial-dot aria-label="Show testimonial 3 of 3"></button>
+              </div>
+            </div>
+          </section>
+          <section class="sf-home-proof sf-home-partners" aria-labelledby="partners-title">
+            <div class="sf-wrap sf-home-proof-inner">
+              <header class="sf-home-proof-heading">
+                <h2 id="partners-title">Our partner network</h2>
+              </header>
+              <div class="sf-partner-marquee" role="region" aria-label="Illustrative gem authority logos" tabindex="0">
+                <div class="sf-partner-track">
+                  <ul class="sf-partner-logo-set">
+                    <li>
+                      <span class="sf-partner-logo">
+                        <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 3 35 14 20 37 5 14 20 3Z" /><path d="M5 14h30M14 14l6 23 6-23M14 14l6-11 6 11" /></svg>
+                        <span>Gem Authority</span><small>Sample logo 01</small>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="sf-partner-logo">
+                        <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 3 35 14 20 37 5 14 20 3Z" /><path d="M5 14h30M14 14l6 23 6-23M14 14l6-11 6 11" /></svg>
+                        <span>Gem Authority</span><small>Sample logo 02</small>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="sf-partner-logo">
+                        <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 3 35 14 20 37 5 14 20 3Z" /><path d="M5 14h30M14 14l6 23 6-23M14 14l6-11 6 11" /></svg>
+                        <span>Gem Authority</span><small>Sample logo 03</small>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="sf-partner-logo">
+                        <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 3 35 14 20 37 5 14 20 3Z" /><path d="M5 14h30M14 14l6 23 6-23M14 14l6-11 6 11" /></svg>
+                        <span>Gem Authority</span><small>Sample logo 04</small>
+                      </span>
+                    </li>
+                  </ul>
+                  <ul class="sf-partner-logo-set" aria-hidden="true">
+                    <li>
+                      <span class="sf-partner-logo">
+                        <svg viewBox="0 0 40 40"><path d="M20 3 35 14 20 37 5 14 20 3Z" /><path d="M5 14h30M14 14l6 23 6-23M14 14l6-11 6 11" /></svg>
+                        <span>Gem Authority</span><small>Sample logo 01</small>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="sf-partner-logo">
+                        <svg viewBox="0 0 40 40"><path d="M20 3 35 14 20 37 5 14 20 3Z" /><path d="M5 14h30M14 14l6 23 6-23M14 14l6-11 6 11" /></svg>
+                        <span>Gem Authority</span><small>Sample logo 02</small>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="sf-partner-logo">
+                        <svg viewBox="0 0 40 40"><path d="M20 3 35 14 20 37 5 14 20 3Z" /><path d="M5 14h30M14 14l6 23 6-23M14 14l6-11 6 11" /></svg>
+                        <span>Gem Authority</span><small>Sample logo 03</small>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="sf-partner-logo">
+                        <svg viewBox="0 0 40 40"><path d="M20 3 35 14 20 37 5 14 20 3Z" /><path d="M5 14h30M14 14l6 23 6-23M14 14l6-11 6 11" /></svg>
+                        <span>Gem Authority</span><small>Sample logo 04</small>
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <a class="sf-arrow-link sf-partner-cta" href="contact.html">Become a partner</a>
+            </div>
+          </section>
+          <section class="sf-home-newsletter" aria-labelledby="newsletter-title">
+            <div class="sf-wrap sf-newsletter-panel">
+              <p class="sf-newsletter-kicker">Taaffeite Origin</p>
+              <h2 id="newsletter-title">Newsletter</h2>
+              <p class="sf-newsletter-copy">Receive updates on new gemstones, sourcing and stories from Taaffeite Origin.</p>
+              <form class="sf-newsletter-form" data-newsletter-form>
+                <label class="sf-visually-hidden" for="newsletter-email">Email address</label>
+                <input
+                  id="newsletter-email"
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  placeholder="Your email address"
+                  aria-describedby="newsletter-note newsletter-status"
+                  required
+                />
+                <button class="sf-newsletter-submit" type="submit">
+                  Join the list
+                  <svg aria-hidden="true" viewBox="0 0 24 24" fill="none">
+                    <path d="M5 12h14m-6-6 6 6-6 6" />
+                  </svg>
+                </button>
+              </form>
+              <p class="sf-newsletter-note" id="newsletter-note">
+                Preview only — sign-ups are not stored or sent.
+              </p>
+              <p class="sf-newsletter-status" id="newsletter-status" data-newsletter-status role="status" aria-live="polite"></p>
+            </div>
+          </section>
+        </main>
+                                <footer class="sf-footer">
+          <img class="sf-footer-ghost" src="assets/taaffeite-origin-logo.png" alt="" aria-hidden="true" />
+          <div class="sf-wrap sf-footer-hero">
+            <h2 class="sf-footer-title">Rare &amp; Ethically</h2>
+            <p class="sf-footer-contact">Sourced gemstones in Sri Lanka and beyond</p>
+          </div>
+          <div class="sf-wrap sf-footer-main">
+            <div class="sf-footer-brand-col">
+              <a class="sf-footer-brand" href="home.html" aria-label="Taaffeite Origin home">
+                <span>Taaffeite Origin</span>
+              </a>
+              <p class="sf-footer-description">Rare gemstones. Rooted in Sri Lanka.</p>
+              <h2 class="sf-footer-social-title">Socials</h2>
+              <div class="sf-footer-social-links" role="group" aria-label="Social channels">
+                <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer" aria-label="LinkedIn (opens in a new tab)"><img src="assets/social/linkedin.svg" alt="" /></a>
+                <a href="https://www.facebook.com/" target="_blank" rel="noreferrer" aria-label="Facebook (opens in a new tab)"><img src="assets/social/facebook.svg" alt="" /></a>
+                <a href="https://www.instagram.com/" target="_blank" rel="noreferrer" aria-label="Instagram (opens in a new tab)"><img src="assets/social/instagram.svg" alt="" /></a>
+                <a href="https://x.com/" target="_blank" rel="noreferrer" aria-label="X (opens in a new tab)"><img src="assets/social/x.svg" alt="" /></a>
+                <a href="https://www.pinterest.com/" target="_blank" rel="noreferrer" aria-label="Pinterest (opens in a new tab)"><img src="assets/social/pinterest-mark.svg" alt="" /></a>
+              </div>
+            </div>
+            <nav class="sf-footer-col" aria-label="Quick links">
+              <h2>Quick links</h2>
+              <a href="home.html#origin">About us</a>
+              <a href="miners-path.html">Miner's Path</a>
+              <a href="home.html#newsletter-title">Newsletter</a>
+              <a href="account.html">Account overview</a>
+              <a href="privacy.html">Privacy policy</a>
+              <a href="terms.html">Terms and conditions</a>
+            </nav>
+            <nav class="sf-footer-col" aria-label="Our services">
+              <h2>Our services</h2>
+              <a href="contact.html#contact-stone-fields">Request a stone</a>
+              <a href="track-order.html">Track an order</a>
+              <a href="buy-now.html">Browse gemstones</a>
+              <a href="auctions.html">Auctions</a>
+              <a href="private-collection.html">Private collection</a>
+              <a href="contact.html">Certificate enquiries</a>
+            </nav>
+            <div class="sf-footer-col sf-footer-contact-col">
+              <h2>Contact us</h2>
+              <div class="sf-footer-contact-list">
+                <p>Colombo, Sri Lanka</p>
+                <p><a href="mailto:support@taaffeite.com">support@taaffeite.com</a></p>
+                <p>Details available when live contact is connected</p>
+                <a class="sf-footer-contact-link" href="contact.html">Contact form<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M8 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg></a>
+              </div>
+            </div>
+          </div>
+          <div class="sf-wrap sf-footer-pay">
+            <h2>We accept</h2>
+            <ul>
+              <li><span class="sf-pay-chip sf-pay-chip--bank"><svg width="12" height="12" viewBox="0 0 16 16" aria-hidden="true"><path d="M1.5 5 8 1.8 14.5 5h-13ZM3 6.5v5m3-5v5m4-5v5m3-5v5M1.5 13h13" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" /></svg>Bank transfer</span></li>
+              <li><span class="sf-pay-chip sf-pay-chip--swift"><svg width="12" height="12" viewBox="0 0 16 16" aria-hidden="true"><path d="M1.5 5 8 1.8 14.5 5h-13ZM3 6.5v5m3-5v5m4-5v5m3-5v5M1.5 13h13" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" /></svg>SWIFT wire</span></li>
+            </ul>
+          </div>
+          <div class="sf-wrap sf-footer-bottom">
+            <p>© Taaffeite Origin 2026 · All rights reserved.</p>
+            <p>Demo preview</p>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <!-- Cart drawer and mobile menu: site.js shows these when the Cart / Menu buttons are pressed. -->
+    <template id="tpl-cart-drawer">
+      <div class="sf-drawer-backdrop" role="presentation">
+        <aside class="sf-drawer" role="dialog" aria-modal="true" aria-labelledby="cart-title">
+          <div class="sf-drawer-head">
+            <h2 id="cart-title">Your cart<span> ( 1 )</span></h2>
+            <button class="sf-text-btn" type="button">Close</button>
+          </div>
+          <div class="sf-drawer-items">
+            <article class="sf-cart-item">
+              <img
+                alt=""
+                src="assets/products/DSC01864.webp"
+              />
+              <div>
+                <div class="sf-cart-item-top">
+                  <h3>Blue Sapphire</h3>
+                  <strong>$5,400</strong>
+                </div>
+                <p>Sri Lanka · 3.42 ct</p>
+                <small>Certificate requested</small
+                ><small class="cart-hold-timer">Held for you · 09:24 remaining</small>
+                <div class="sf-qty">
+                  <button type="button" aria-label="Remove one Blue Sapphire"><span aria-hidden="true">−</span></button
+                  ><span>1</span
+                  ><button type="button" aria-label="Add one Blue Sapphire"><span aria-hidden="true">+</span></button>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="sf-drawer-foot">
+            <div class="sf-cart-total"><span>Illustrative subtotal</span><strong>$5,400</strong></div>
+            <button class="sf-btn sf-btn--primary sf-btn--block" type="button" data-href="checkout.html">
+              Continue to checkout
+            </button>
+            <p class="sf-fineprint">No payment details are collected and no order is placed.</p>
+          </div>
+        </aside>
+      </div>
+    </template>
+    <template id="tpl-mobile-menu">
+      <div id="sf-mobile-menu" class="sf-mobile-menu">
+        <nav aria-label="Main navigation">
+          <a href="buy-now.html" aria-current="page"
+            >Buy Now<svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-arrow-right"
+              aria-hidden="true"
+            >
+              <path d="M5 12h14"></path>
+              <path d="m12 5 7 7-7 7"></path></svg></a
+          ><a href="auctions.html"
+            >Auctions<svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-arrow-right"
+              aria-hidden="true"
+            >
+              <path d="M5 12h14"></path>
+              <path d="m12 5 7 7-7 7"></path></svg></a
+          ><a href="private-collection.html"
+            >Private Collection<svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-arrow-right"
+              aria-hidden="true"
+            >
+              <path d="M5 12h14"></path>
+              <path d="m12 5 7 7-7 7"></path></svg></a
+          ><a href="miners-path.html"
+            >Miner's Path<svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-arrow-right"
+              aria-hidden="true"
+            >
+              <path d="M5 12h14"></path>
+              <path d="m12 5 7 7-7 7"></path></svg></a
+          ><a href="contact.html"
+            >Contact Us<svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-arrow-right"
+              aria-hidden="true"
+            >
+              <path d="M5 12h14"></path>
+              <path d="m12 5 7 7-7 7"></path></svg></a
+          ><a href="account.html"
+            >Account<svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-arrow-right"
+              aria-hidden="true"
+            >
+              <path d="M5 12h14"></path>
+              <path d="m12 5 7 7-7 7"></path></svg
+          ></a>
+        </nav>
+        <div class="sf-mobile-menu-prefs">
+          <label class="sf-currency"
+            ><span>Currency</span
+            ><select>
+              <option value="USD">USD</option>
+              <option value="GBP">GBP</option>
+              <option value="LKR">LKR</option>
+            </select></label
+          ><button class="sf-text-btn" type="button" aria-pressed="false">Switch to dark theme</button>
+        </div>
+      </div>
+    </template>
+
+    <script src="site.js"></script>
+  </body>
+</html>

@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Account transactions | Taaffeite Origin</title>
+    <meta name="description" content="Review payment transactions and order charges in your Taaffeite Origin account." />
+    <link rel="icon" type="image/png" href="assets/taaffeite-origin-logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&amp;family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,600&amp;display=swap" />
+    <link rel="stylesheet" href="styles.css" />
+    <script>
+      try {
+        if (localStorage.getItem("taaffeite-origin-theme") === "dark") document.documentElement.dataset.theme = "dark";
+      } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <div id="root">
+      <div class="archive-site archive-site--vault" data-theme="light">
+        <header class="sf-header">
+          <div class="sf-header-inner">
+            <button class="sf-text-btn sf-menu-toggle" type="button" aria-expanded="false" aria-controls="sf-mobile-menu" aria-label="Open menu">Menu</button>
+            <nav class="sf-nav" aria-label="Main navigation">
+              <a href="buy-now.html">Buy Now</a>
+              <a href="auctions.html">Auctions</a>
+              <a href="private-collection.html">Private Collection</a>
+            </nav>
+            <a class="sf-brand sf-script-mark" href="home.html" aria-label="Taaffeite Origin home"><img class="sf-logo-image" src="assets/taaffeite-origin-logo.png" alt="" /></a>
+            <div class="sf-actions">
+              <nav class="sf-nav sf-nav--secondary" aria-label="Explore">
+                <a href="miners-path.html">Miner's Path</a>
+                <a href="contact.html">Contact Us</a>
+              </nav>
+              <a class="sf-text-btn sf-account-link" href="account.html" aria-label="User login" title="User login">Account</a>
+              <button class="sf-text-btn sf-cart-toggle" type="button" aria-label="Open cart, 1 item" title="Cart">Cart (1)</button>
+              <label class="sf-currency"><span class="sf-visually-hidden">Currency</span><select aria-label="Currency"><option value="USD" selected>USD</option><option value="GBP">GBP</option><option value="LKR">LKR</option></select></label>
+              <button class="sf-text-btn sf-theme-toggle" type="button" aria-pressed="false" aria-label="Switch to dark theme" title="Switch to dark theme">Dark</button>
+            </div>
+          </div>
+        </header>
+        <main class="vault-page account-page account-records-page account-transactions-page">
+          <section class="account-hero section-wrap" aria-labelledby="account-title">
+            <div>
+              <a class="vault-back-link" href="home.html">
+                <svg aria-hidden="true" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m12 19-7-7 7-7"></path><path d="M19 12H5"></path></svg>
+                Back to home
+              </a>
+              <h1 class="sf-visually-hidden" id="account-title">Account transactions</h1>
+            </div>
+            <div class="account-menu-wrap">
+              <button class="account-menu-toggle" type="button" aria-expanded="false" aria-controls="account-user-menu">
+                <span class="account-menu-avatar" aria-hidden="true">CH</span>
+                <span>Charlotte Hughes</span>
+                <svg aria-hidden="true" viewBox="0 0 16 16" width="14" height="14"><path d="m4 6 4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" /></svg>
+              </button>
+              <div class="account-identity" id="account-user-menu" hidden>
+                <p class="account-menu-email">client@taaffeite.demo</p>
+                <p class="account-collection-status"><span class="account-collection-status-dot" aria-hidden="true"></span><span>Private Collection: Not a member</span></p>
+                <a class="account-menu-action" href="account-profile.html">Edit Details</a>
+                <button class="account-signout-button" type="button">Sign out</button>
+              </div>
+            </div>
+          </section>
+          <section class="account-panel section-wrap" aria-live="polite" aria-labelledby="account-panel-title">
+            <div class="account-settings-layout">
+              <nav class="account-settings-nav" aria-label="Account sections">
+                <p class="account-settings-label">My account</p>
+                <a href="account.html">Overview</a>
+                <a href="account-profile.html">Personal details</a>
+                <p class="account-settings-label">My activity</p>
+                <a href="account-orders.html">Orders</a>
+                <a href="account-transactions.html" aria-current="page">Transactions</a>
+                <a href="account-bids.html">Auction bids</a>
+                <a href="account-activity.html">Recent activity</a>
+                <p class="account-settings-label">My collection</p>
+                <a href="account-cart.html">Saved cart</a>
+                <a href="buy-now.html">Browse gemstones</a>
+              </nav>
+              <div class="account-section-content">
+                <div class="account-panel-heading">
+                  <h2 id="account-panel-title">Transactions</h2>
+                  <p>Track money in and out of your account, including purchases and auction holds.</p>
+                </div>
+                <dl class="account-transaction-summary" aria-label="Transaction totals">
+                  <div>
+                    <dt>Total debit</dt>
+                    <dd>$0 <span>USD</span></dd>
+                  </div>
+                  <div>
+                    <dt>Total credit</dt>
+                    <dd>$9,800 <span>USD</span></dd>
+                  </div>
+                  <div>
+                    <dt>Pending verification</dt>
+                    <dd>$3,150 <span>USD</span></dd>
+                  </div>
+                </dl>
+                <div class="account-transactions" aria-label="Posted transaction history">
+                  <button class="account-record-row account-transaction-row" type="button" aria-haspopup="dialog" aria-label="View transaction for order TO-DEMO1001" data-detail-title="Transaction · TO-DEMO1001" data-detail-template="transaction-demo1001">
+                    <span class="account-record-primary"><strong>26 Oct 2026 · Purchase credit</strong><small>TO-DEMO1001 · Padparadscha Sapphire</small></span>
+                    <strong class="account-record-amount is-credit">+$9,800</strong>
+                    <span class="account-chip is-success">Confirmed</span>
+                    <span class="account-record-action">Details <span aria-hidden="true">↗</span></span>
+                  </button>
+                  <template id="transaction-demo1001">
+                    <div class="account-record-details">
+                      <p class="vault-micro-label">Purchase credit · 26 Oct 2026</p>
+                      <dl>
+                        <div><dt>Order</dt><dd><a href="account-orders.html">TO-DEMO1001</a></dd></div>
+                        <div><dt>Gemstone</dt><dd>Padparadscha Sapphire</dd></div>
+                        <div><dt>Payment method</dt><dd>Bank transfer</dd></div>
+                        <div><dt>Debit</dt><dd>—</dd></div>
+                        <div><dt>Credit</dt><dd>$9,800 USD</dd></div>
+                        <div><dt>Status</dt><dd>Confirmed · processing</dd></div>
+                      </dl>
+                    </div>
+                  </template>
+                </div>
+                <button class="account-record-row account-transaction-row" type="button" aria-haspopup="dialog" aria-label="View pending transaction for order TO-DEMO1005" data-detail-title="Pending payment · TO-DEMO1005" data-detail-template="transaction-demo1005">
+                  <span class="account-record-primary"><strong>17 Nov 2026 · Payment pending</strong><small>TO-DEMO1005 · Spinel · Not posted</small></span>
+                  <strong class="account-record-amount">$3,150</strong>
+                  <span class="account-chip is-pending">Awaiting verification</span>
+                  <span class="account-record-action">Details <span aria-hidden="true">↗</span></span>
+                </button>
+                <template id="transaction-demo1005">
+                  <div class="account-record-details">
+                    <p class="vault-micro-label">Pending · not included in totals</p>
+                    <dl>
+                      <div><dt>Order</dt><dd><a href="account-orders.html">TO-DEMO1005</a></dd></div>
+                      <div><dt>Gemstone</dt><dd>Spinel</dd></div>
+                      <div><dt>Payment method</dt><dd>Bank transfer</dd></div>
+                      <div><dt>Amount</dt><dd>$3,150 USD</dd></div>
+                      <div><dt>Status</dt><dd>Reserved, not confirmed</dd></div>
+                      <div><dt>Ledger status</dt><dd>Not posted; excluded from debit and credit totals</dd></div>
+                    </dl>
+                  </div>
+                </template>
+                <details class="account-ledger-categories">
+                  <summary>Debit and credit categories</summary>
+                  <p><strong>Debit:</strong> withdrawals and $20 held for each auction participation. <strong>Credit:</strong> deposits, purchases, held amount refunds, refunds and discounts.</p>
+                  <p>No deposits, withdrawals, auction holds, refunds or discounts are recorded in this demo account.</p>
+                </details>
+                <p class="account-transaction-note">Demo history only. Pending payments are not included in debit or credit totals.</p>
+              </div>
+            </div>
+          </section>
+        </main>
+        <footer class="sf-footer">
+          <img class="sf-footer-ghost" src="assets/taaffeite-origin-logo.png" alt="" aria-hidden="true" />
+          <div class="sf-wrap sf-footer-hero">
+            <h2 class="sf-footer-title">Rare &amp; Ethically</h2>
+            <p class="sf-footer-contact">Sourced gemstones in Sri Lanka and beyond</p>
+          </div>
+          <div class="sf-wrap sf-footer-main">
+            <div class="sf-footer-brand-col">
+              <a class="sf-footer-brand" href="home.html" aria-label="Taaffeite Origin home"><span>Taaffeite Origin</span></a>
+              <p class="sf-footer-description">Rare gemstones. Rooted in Sri Lanka.</p>
+            </div>
+            <nav class="sf-footer-col" aria-label="Quick links">
+              <h2>Quick links</h2>
+              <a href="home.html#origin">About us</a>
+              <a href="miners-path.html">Miner's Path</a>
+              <a href="account.html">Account overview</a>
+              <a href="privacy.html">Privacy policy</a>
+            </nav>
+            <nav class="sf-footer-col" aria-label="Our services">
+              <h2>Our services</h2>
+              <a href="contact.html">Request a stone</a>
+              <a href="track-order.html">Track an order</a>
+              <a href="buy-now.html">Browse gemstones</a>
+              <a href="auctions.html">Auctions</a>
+            </nav>
+            <div class="sf-footer-col sf-footer-contact-col">
+              <h2>Contact us</h2>
+              <div class="sf-footer-contact-list">
+                <p>Colombo, Sri Lanka</p>
+                <p><a href="mailto:support@taaffeite.com">support@taaffeite.com</a></p>
+                <a class="sf-footer-contact-link" href="contact.html">Contact form</a>
+              </div>
+            </div>
+          </div>
+          <div class="sf-wrap sf-footer-pay">
+            <h2>We accept</h2>
+            <ul><li><span class="sf-pay-chip sf-pay-chip--bank">Bank transfer</span></li><li><span class="sf-pay-chip sf-pay-chip--swift">SWIFT wire</span></li></ul>
+          </div>
+          <div class="sf-wrap sf-footer-bottom">
+            <p>© Taaffeite Origin 2026 · All rights reserved.</p>
+            <p>Demo preview</p>
+          </div>
+        </footer>
+        <dialog class="account-detail-dialog" id="account-detail-dialog" aria-labelledby="account-detail-title">
+          <div class="account-detail-dialog-head">
+            <h2 id="account-detail-title"></h2>
+            <button class="account-detail-close" type="button" aria-label="Close details">Close</button>
+          </div>
+          <div class="account-detail-dialog-body" id="account-detail-body"></div>
+        </dialog>
+      </div>
+    </div>
+    <template id="tpl-cart-drawer">
+      <div class="sf-drawer-backdrop" role="presentation">
+        <aside class="sf-drawer" role="dialog" aria-modal="true" aria-labelledby="cart-title">
+          <div class="sf-drawer-head"><h2 id="cart-title">Your cart</h2><button class="sf-text-btn" type="button">Close</button></div>
+          <div class="sf-drawer-foot"><a class="sf-btn sf-btn--primary sf-btn--block" href="account-cart.html">View saved cart</a></div>
+        </aside>
+      </div>
+    </template>
+    <template id="tpl-mobile-menu">
+      <div id="sf-mobile-menu" class="sf-mobile-menu">
+        <nav aria-label="Main navigation">
+          <a href="buy-now.html">Buy Now</a>
+          <a href="auctions.html">Auctions</a>
+          <a href="private-collection.html">Private Collection</a>
+          <a href="miners-path.html">Miner's Path</a>
+          <a href="contact.html">Contact Us</a>
+          <a href="account-transactions.html">Account</a>
+        </nav>
+        <div class="sf-mobile-menu-prefs">
+          <label class="sf-currency"><span>Currency</span><select><option value="USD">USD</option><option value="GBP">GBP</option><option value="LKR">LKR</option></select></label>
+          <button class="sf-text-btn" type="button" aria-pressed="false">Switch to dark theme</button>
+        </div>
+      </div>
+    </template>
+    <script src="site.js"></script>
+  </body>
+</html>

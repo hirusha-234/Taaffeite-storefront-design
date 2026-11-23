@@ -1,0 +1,652 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gemstone Auctions | Taaffeite Origin</title>
+    <meta
+      name="description"
+      content="Bid on rare gemstones from Sri Lanka and around the world in Taaffeite Origin auctions."
+    />
+    <link rel="icon" type="image/png" href="assets/taaffeite-origin-logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&amp;family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,600&amp;display=swap" />
+    
+    <link rel="stylesheet" href="styles.css" />
+    <script>
+      try {
+        if (localStorage.getItem("taaffeite-origin-theme") === "dark") document.documentElement.dataset.theme = "dark";
+      } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <div id="root">
+      <div class="archive-site" data-theme="light">
+        <header class="sf-header">
+          <div class="sf-header-inner">
+            <button
+              class="sf-text-btn sf-menu-toggle"
+              type="button"
+              aria-expanded="false"
+              aria-controls="sf-mobile-menu"
+              aria-label="Open menu"
+            >
+              Menu
+            </button>
+            <nav class="sf-nav" aria-label="Main navigation">
+              <a href="buy-now.html">Buy Now</a><a href="auctions.html" aria-current="page">Auctions</a
+              ><a href="private-collection.html">Private Collection</a>
+            </nav>
+            <a class="sf-brand sf-script-mark" href="home.html" aria-label="Taaffeite Origin home"
+              ><img class="sf-logo-image" src="assets/taaffeite-origin-logo.png" alt="" /></a>
+            <div class="sf-actions">
+              <nav class="sf-nav sf-nav--secondary" aria-label="Explore">
+                <a href="miners-path.html">Miner's Path</a><a href="contact.html">Contact Us</a>
+              </nav>
+              <a class="sf-text-btn sf-account-link" href="account.html" aria-label="User login" title="User login"
+                >Account</a
+              ><button class="sf-text-btn sf-cart-toggle" type="button" aria-label="Open cart, 1 items" title="Cart">
+                Cart ( 1 )</button
+              ><label class="sf-currency"
+                ><span class="sf-visually-hidden">Currency</span
+                ><select aria-label="Currency">
+                  <option value="USD" selected="">USD</option>
+                  <option value="GBP">GBP</option>
+                  <option value="LKR">LKR</option>
+                </select></label
+              ><button
+                class="sf-text-btn sf-theme-toggle"
+                type="button"
+                aria-pressed="false"
+                aria-label="Switch to dark theme"
+                title="Switch to dark theme"
+              >
+                Dark
+              </button>
+            </div>
+          </div>
+        </header>
+        <main class="sf-catalog">
+          <header class="sf-page-head sf-wrap">
+            <p class="sf-eyebrow">Auctions</p>
+            <h1>The auction <em>archive</em></h1>
+            <p class="sf-lede">
+              Explore the stones entering the archive. Each listing is a preview of a considered, time-bound discovery.
+            </p>
+          </header>
+          <section class="sf-wrap" id="catalog-products" aria-label="Auction gemstone listings">
+            <div class="sf-toolbar">
+              <p aria-live="polite">40 stones</p>
+              <div class="sf-toolbar-controls">
+                <label class="sf-select"
+                  ><span>Stone type</span
+                  ><select>
+                    <option value="" selected="">All types</option>
+                    <option value="Alexandrite">Alexandrite</option>
+                    <option value="Amethyst">Amethyst</option>
+                    <option value="Apatite">Apatite</option>
+                    <option value="Aquamarine">Aquamarine</option>
+                    <option value="Australian Opal">Australian Opal</option>
+                    <option value="Black Spinel">Black Spinel</option>
+                    <option value="Bloodstone">Bloodstone</option>
+                    <option value="Blue Sapphire">Blue Sapphire</option>
+                    <option value="Blue Zircon">Blue Zircon</option>
+                    <option value="Cat's Eye Chrysoberyl">Cat's Eye Chrysoberyl</option>
+                    <option value="Chrysoberyl">Chrysoberyl</option>
+                    <option value="Citrine">Citrine</option>
+                    <option value="Color-change Garnet">Color-change Garnet</option>
+                    <option value="Demantoid Garnet">Demantoid Garnet</option>
+                    <option value="Emerald">Emerald</option>
+                    <option value="Fire Opal">Fire Opal</option>
+                    <option value="Garnet">Garnet</option>
+                    <option value="Golden Beryl">Golden Beryl</option>
+                    <option value="Hessonite Garnet">Hessonite Garnet</option>
+                    <option value="Iolite">Iolite</option>
+                    <option value="Kunzite">Kunzite</option>
+                    <option value="Labradorite">Labradorite</option>
+                    <option value="Moonstone">Moonstone</option>
+                    <option value="Morganite">Morganite</option>
+                    <option value="Padparadscha Sapphire">Padparadscha Sapphire</option>
+                    <option value="Paraiba Tourmaline">Paraiba Tourmaline</option>
+                    <option value="Peridot">Peridot</option>
+                    <option value="Purple Sapphire">Purple Sapphire</option>
+                    <option value="Rhodolite Garnet">Rhodolite Garnet</option>
+                    <option value="Rose Quartz">Rose Quartz</option>
+                    <option value="Ruby">Ruby</option>
+                    <option value="Sphene">Sphene</option>
+                    <option value="Spinel">Spinel</option>
+                    <option value="Taaffeite">Taaffeite</option>
+                    <option value="Tanzanite">Tanzanite</option>
+                    <option value="Topaz">Topaz</option>
+                    <option value="Tourmaline">Tourmaline</option>
+                    <option value="White Sapphire">White Sapphire</option>
+                    <option value="Yellow Sapphire">Yellow Sapphire</option>
+                    <option value="Zircon">Zircon</option>
+                  </select></label
+                ><label class="sf-select"
+                  ><span>Sort by</span
+                  ><select>
+                    <option value="featured" selected="">Featured</option>
+                    <option value="price-asc">Price: low to high</option>
+                    <option value="price-desc">Price: high to low</option>
+                    <option value="popular">Most popular</option>
+                    <option value="weight">Carat weight</option>
+                  </select></label
+                ><label class="sf-select sf-select--carat"
+                  ><span>Min ct</span><input min="0" step="0.01" inputmode="decimal" type="number" value="" /></label
+                ><label class="sf-select sf-select--carat"
+                  ><span>Max ct</span><input min="0" step="0.01" inputmode="decimal" type="number" value=""
+                /></label>
+              </div>
+            </div>
+            <div class="sf-grid">
+              <a class="sf-card" href="product-auction.html"
+                ><span class="sf-card-media"
+                  ><img
+                    alt="Blue gemstone specimen on a light surface"
+                    loading="lazy"
+                    src="assets/products/DSC01910.webp" /></span
+                ><span class="sf-card-body"
+                  ><span class="sf-card-name">Ceylon Blue Sapphire</span
+                  ><span class="sf-card-meta">Sri Lanka · 2.84 ct</span
+                  ><span class="sf-card-price"><small>Current bid</small><strong>$5,150</strong></span></span
+                ></a
+              ><a class="sf-card" href="product-auction.html"
+                ><span class="sf-card-media"
+                  ><img
+                    alt="Green gemstone specimen on a pale background"
+                    loading="lazy"
+                    src="assets/products/DSC01936.webp" /></span
+                ><span class="sf-card-body"
+                  ><span class="sf-card-name">Emerald</span><span class="sf-card-meta">Colombia · 2.18 ct</span
+                  ><span class="sf-card-price"><small>Current bid</small><strong>$2,340</strong></span></span
+                ></a
+              ><a class="sf-card" href="product-auction.html"
+                ><span class="sf-card-media"
+                  ><img
+                    alt="Ruby-toned gemstone specimen in warm light"
+                    loading="lazy"
+                    src="assets/products/DSC01886.webp" /></span
+                ><span class="sf-card-body"
+                  ><span class="sf-card-name">Ruby</span><span class="sf-card-meta">Mozambique · 1.76 ct</span
+                  ><span class="sf-card-price"><small>Current bid</small><strong>$5,300</strong></span></span
+                ></a
+              ><a class="sf-card" href="product-auction.html"
+                ><span class="sf-card-media"
+                  ><img
+                    alt="Violet gemstone specimen"
+                    loading="lazy"
+                    src="assets/products/DSC01699.webp" /></span
+                ><span class="sf-card-body"
+                  ><span class="sf-card-name">Amethyst</span><span class="sf-card-meta">Brazil · 5.20 ct</span
+                  ><span class="sf-card-price"><small>Current bid</small><strong>$720</strong></span></span
+                ></a
+              ><a class="sf-card" href="product-auction.html"
+                ><span class="sf-card-media"
+                  ><img
+                    alt="Faceted gemstone catching the light"
+                    loading="lazy"
+                    src="assets/products/DSC01825.webp" /></span
+                ><span class="sf-card-body"
+                  ><span class="sf-card-name">Australian Opal</span><span class="sf-card-meta">Australia · 4.60 ct</span
+                  ><span class="sf-card-price"><small>Current bid</small><strong>$2,180</strong></span></span
+                ></a
+              ><a class="sf-card" href="product-auction.html"
+                ><span class="sf-card-media"
+                  ><img
+                    alt="Opalescent gemstone study"
+                    loading="lazy"
+                    src="assets/products/DSC01876.webp" /></span
+                ><span class="sf-card-body"
+                  ><span class="sf-card-name">Spinel</span><span class="sf-card-meta">Tanzania · 1.95 ct</span
+                  ><span class="sf-card-price"><small>Current bid</small><strong>$2,460</strong></span></span
+                ></a
+              ><a class="sf-card" href="product-auction.html"
+                ><span class="sf-card-media"
+                  ><img
+                    alt="Blue gemstone specimen on a light surface"
+                    loading="lazy"
+                    src="assets/products/DSC01753.webp" /></span
+                ><span class="sf-card-body"
+                  ><span class="sf-card-name">Garnet</span><span class="sf-card-meta">Madagascar · 2.64 ct</span
+                  ><span class="sf-card-price"><small>Current bid</small><strong>$1,130</strong></span></span
+                ></a
+              ><a class="sf-card" href="product-auction.html"
+                ><span class="sf-card-media"
+                  ><img
+                    alt="Green gemstone specimen on a pale background"
+                    loading="lazy"
+                    src="assets/products/DSC01821.webp" /></span
+                ><span class="sf-card-body"
+                  ><span class="sf-card-name">Tourmaline</span><span class="sf-card-meta">Nigeria · 3.08 ct</span
+                  ><span class="sf-card-price"><small>Current bid</small><strong>$2,070</strong></span></span
+                ></a
+              ><a class="sf-card" href="product-auction.html"
+                ><span class="sf-card-media"
+                  ><img
+                    alt="Ruby-toned gemstone specimen in warm light"
+                    loading="lazy"
+                    src="assets/products/DSC01679.webp" /></span
+                ><span class="sf-card-body"
+                  ><span class="sf-card-name">Tanzanite</span><span class="sf-card-meta">Tanzania · 2.72 ct</span
+                  ><span class="sf-card-price"><small>Current bid</small><strong>$2,650</strong></span></span
+                ></a
+              ><a class="sf-card" href="product-auction.html"
+                ><span class="sf-card-media"
+                  ><img
+                    alt="Violet gemstone specimen"
+                    loading="lazy"
+                    src="assets/products/DSC01844.webp" /></span
+                ><span class="sf-card-body"
+                  ><span class="sf-card-name">Aquamarine</span><span class="sf-card-meta">Madagascar · 4.15 ct</span
+                  ><span class="sf-card-price"><small>Current bid</small><strong>$1,720</strong></span></span
+                ></a
+              ><a class="sf-card" href="product-auction.html"
+                ><span class="sf-card-media"
+                  ><img
+                    alt="Faceted gemstone catching the light"
+                    loading="lazy"
+                    src="assets/products/DSC01957.webp" /></span
+                ><span class="sf-card-body"
+                  ><span class="sf-card-name">Citrine</span><span class="sf-card-meta">Brazil · 6.30 ct</span
+                  ><span class="sf-card-price"><small>Current bid</small><strong>$610</strong></span></span
+                ></a
+              ><a class="sf-card" href="product-auction.html"
+                ><span class="sf-card-media"
+                  ><img
+                    alt="Opalescent gemstone study"
+                    loading="lazy"
+                    src="assets/products/DSC01949.webp" /></span
+                ><span class="sf-card-body"
+                  ><span class="sf-card-name">Peridot</span><span class="sf-card-meta">Pakistan · 1.88 ct</span
+                  ><span class="sf-card-price"><small>Current bid</small><strong>$1,440</strong></span></span
+                ></a
+              ><a class="sf-card" href="product-auction.html"
+                ><span class="sf-card-media"
+                  ><img
+                    alt="Blue gemstone specimen on a light surface"
+                    loading="lazy"
+                    src="assets/products/DSC01971.webp" /></span
+                ><span class="sf-card-body"
+                  ><span class="sf-card-name">Moonstone</span><span class="sf-card-meta">Sri Lanka · 3.75 ct</span
+                  ><span class="sf-card-price"><small>Current bid</small><strong>$980</strong></span></span
+                ></a
+              ><a class="sf-card" href="product-auction.html"
+                ><span class="sf-card-media"
+                  ><img
+                    alt="Green gemstone specimen on a pale background"
+                    loading="lazy"
+                    src="assets/products/DSC01852.webp" /></span
+                ><span class="sf-card-body"
+                  ><span class="sf-card-name">Zircon</span><span class="sf-card-meta">Cambodia · 2.34 ct</span
+                  ><span class="sf-card-price"><small>Current bid</small><strong>$1,310</strong></span></span
+                ></a
+              ><a class="sf-card" href="product-auction.html"
+                ><span class="sf-card-media"
+                  ><img
+                    alt="Ruby-toned gemstone specimen in warm light"
+                    loading="lazy"
+                    src="assets/products/DSC01839.webp" /></span
+                ><span class="sf-card-body"
+                  ><span class="sf-card-name">Chrysoberyl</span><span class="sf-card-meta">Sri Lanka · 1.63 ct</span
+                  ><span class="sf-card-price"><small>Current bid</small><strong>$2,260</strong></span></span
+                ></a
+              ><a class="sf-card" href="product-auction.html"
+                ><span class="sf-card-media"
+                  ><img
+                    alt="Violet gemstone specimen"
+                    loading="lazy"
+                    src="assets/products/DSC01787.webp" /></span
+                ><span class="sf-card-body"
+                  ><span class="sf-card-name">Cat's Eye Chrysoberyl</span
+                  ><span class="sf-card-meta">Sri Lanka · 2.06 ct</span
+                  ><span class="sf-card-price"><small>Current bid</small><strong>$3,200</strong></span></span
+                ></a
+              ><a class="sf-card" href="product-auction.html"
+                ><span class="sf-card-media"
+                  ><img
+                    alt="Faceted gemstone catching the light"
+                    loading="lazy"
+                    src="assets/products/DSC01801.webp" /></span
+                ><span class="sf-card-body"
+                  ><span class="sf-card-name">Topaz</span><span class="sf-card-meta">Nigeria · 5.12 ct</span
+                  ><span class="sf-card-price"><small>Current bid</small><strong>$1,060</strong></span></span
+                ></a
+              ><a class="sf-card" href="product-auction.html"
+                ><span class="sf-card-media"
+                  ><img
+                    alt="Opalescent gemstone study"
+                    loading="lazy"
+                    src="assets/products/DSC01961.webp" /></span
+                ><span class="sf-card-body"
+                  ><span class="sf-card-name">Alexandrite</span><span class="sf-card-meta">Brazil · 1.12 ct</span
+                  ><span class="sf-card-price"><small>Current bid</small><strong>$9,650</strong></span></span
+                ></a
+              ><a class="sf-card" href="product-auction.html"
+                ><span class="sf-card-media"
+                  ><img
+                    alt="Blue gemstone specimen on a light surface"
+                    loading="lazy"
+                    src="assets/products/DSC01701.webp" /></span
+                ><span class="sf-card-body"
+                  ><span class="sf-card-name">Taaffeite</span><span class="sf-card-meta">Sri Lanka · 0.84 ct</span
+                  ><span class="sf-card-price"><small>Current bid</small><strong>$11,800</strong></span></span
+                ></a
+              ><a class="sf-card" href="product-auction.html"
+                ><span class="sf-card-media"
+                  ><img
+                    alt="Green gemstone specimen on a pale background"
+                    loading="lazy"
+                    src="assets/products/DSC01744.webp" /></span
+                ><span class="sf-card-body"
+                  ><span class="sf-card-name">Padparadscha Sapphire</span
+                  ><span class="sf-card-meta">Sri Lanka · 1.38 ct</span
+                  ><span class="sf-card-price"><small>Current bid</small><strong>$7,640</strong></span></span
+                ></a
+              ><a class="sf-card" href="product-auction.html"
+                ><span class="sf-card-media"
+                  ><img
+                    alt="Ruby-toned gemstone specimen in warm light"
+                    loading="lazy"
+                    src="assets/products/DSC01792.webp" /></span
+                ><span class="sf-card-body"
+                  ><span class="sf-card-name">Yellow Sapphire</span><span class="sf-card-meta">Sri Lanka · 2.46 ct</span
+                  ><span class="sf-card-price"><small>Current bid</small><strong>$2,850</strong></span></span
+                ></a
+              ><a class="sf-card" href="product-auction.html"
+                ><span class="sf-card-media"
+                  ><img
+                    alt="Violet gemstone specimen"
+                    loading="lazy"
+                    src="assets/products/DSC01929.webp" /></span
+                ><span class="sf-card-body"
+                  ><span class="sf-card-name">Paraiba Tourmaline</span><span class="sf-card-meta">Brazil · 1.08 ct</span
+                  ><span class="sf-card-price"><small>Current bid</small><strong>$11,620</strong></span></span
+                ></a
+              ><a class="sf-card" href="product-auction.html"
+                ><span class="sf-card-media"
+                  ><img
+                    alt="Faceted gemstone catching the light"
+                    loading="lazy"
+                    src="assets/products/DSC01809.webp" /></span
+                ><span class="sf-card-body"
+                  ><span class="sf-card-name">Morganite</span><span class="sf-card-meta">Madagascar · 4.82 ct</span
+                  ><span class="sf-card-price"><small>Current bid</small><strong>$1,440</strong></span></span
+                ></a
+              ><a class="sf-card" href="product-auction.html"
+                ><span class="sf-card-media"
+                  ><img
+                    alt="Opalescent gemstone study"
+                    loading="lazy"
+                    src="assets/products/DSC01906.webp" /></span
+                ><span class="sf-card-body"
+                  ><span class="sf-card-name">Labradorite</span><span class="sf-card-meta">Madagascar · 8.10 ct</span
+                  ><span class="sf-card-price"><small>Current bid</small><strong>$480</strong></span></span
+                ></a
+              >
+            </div>
+            <nav class="sf-pagination" aria-label="Catalog pages">
+              <button type="button" aria-label="Previous page" disabled="">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-chevron-left"
+                  aria-hidden="true"
+                >
+                  <path d="m15 18-6-6 6-6"></path>
+                </svg></button
+              ><button type="button" aria-label="Page 1" aria-current="page">1</button
+              ><button type="button" aria-label="Page 2">2</button
+              ><button type="button" aria-label="Next page">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-chevron-right"
+                  aria-hidden="true"
+                >
+                  <path d="m9 18 6-6-6-6"></path>
+                </svg>
+              </button>
+            </nav>
+            <p class="sf-fineprint">
+              All listings, prices, origins, weights, treatments, and images on this preview are illustrative. No bids,
+              purchases, or enquiries are sent to a live service.
+            </p>
+          </section>
+        </main>
+                                <footer class="sf-footer">
+          <img class="sf-footer-ghost" src="assets/taaffeite-origin-logo.png" alt="" aria-hidden="true" />
+          <div class="sf-wrap sf-footer-hero">
+            <h2 class="sf-footer-title">Rare &amp; Ethically</h2>
+            <p class="sf-footer-contact">Sourced gemstones in Sri Lanka and beyond</p>
+          </div>
+          <div class="sf-wrap sf-footer-main">
+            <div class="sf-footer-brand-col">
+              <a class="sf-footer-brand" href="home.html" aria-label="Taaffeite Origin home">
+                <span>Taaffeite Origin</span>
+              </a>
+              <p class="sf-footer-description">Rare gemstones. Rooted in Sri Lanka.</p>
+              <h2 class="sf-footer-social-title">Socials</h2>
+              <div class="sf-footer-social-links" role="group" aria-label="Social channels">
+                <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer" aria-label="LinkedIn (opens in a new tab)"><img src="assets/social/linkedin.svg" alt="" /></a>
+                <a href="https://www.facebook.com/" target="_blank" rel="noreferrer" aria-label="Facebook (opens in a new tab)"><img src="assets/social/facebook.svg" alt="" /></a>
+                <a href="https://www.instagram.com/" target="_blank" rel="noreferrer" aria-label="Instagram (opens in a new tab)"><img src="assets/social/instagram.svg" alt="" /></a>
+                <a href="https://x.com/" target="_blank" rel="noreferrer" aria-label="X (opens in a new tab)"><img src="assets/social/x.svg" alt="" /></a>
+                <a href="https://www.pinterest.com/" target="_blank" rel="noreferrer" aria-label="Pinterest (opens in a new tab)"><img src="assets/social/pinterest-mark.svg" alt="" /></a>
+              </div>
+            </div>
+            <nav class="sf-footer-col" aria-label="Quick links">
+              <h2>Quick links</h2>
+              <a href="home.html#origin">About us</a>
+              <a href="miners-path.html">Miner's Path</a>
+              <a href="home.html#newsletter-title">Newsletter</a>
+              <a href="account.html">Account overview</a>
+              <a href="privacy.html">Privacy policy</a>
+              <a href="terms.html">Terms and conditions</a>
+            </nav>
+            <nav class="sf-footer-col" aria-label="Our services">
+              <h2>Our services</h2>
+              <a href="contact.html#contact-stone-fields">Request a stone</a>
+              <a href="track-order.html">Track an order</a>
+              <a href="buy-now.html">Browse gemstones</a>
+              <a href="auctions.html">Auctions</a>
+              <a href="private-collection.html">Private collection</a>
+              <a href="contact.html">Certificate enquiries</a>
+            </nav>
+            <div class="sf-footer-col sf-footer-contact-col">
+              <h2>Contact us</h2>
+              <div class="sf-footer-contact-list">
+                <p>Colombo, Sri Lanka</p>
+                <p><a href="mailto:support@taaffeite.com">support@taaffeite.com</a></p>
+                <p>Details available when live contact is connected</p>
+                <a class="sf-footer-contact-link" href="contact.html">Contact form<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M8 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg></a>
+              </div>
+            </div>
+          </div>
+          <div class="sf-wrap sf-footer-pay">
+            <h2>We accept</h2>
+            <ul>
+              <li><span class="sf-pay-chip sf-pay-chip--bank"><svg width="12" height="12" viewBox="0 0 16 16" aria-hidden="true"><path d="M1.5 5 8 1.8 14.5 5h-13ZM3 6.5v5m3-5v5m4-5v5m3-5v5M1.5 13h13" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" /></svg>Bank transfer</span></li>
+              <li><span class="sf-pay-chip sf-pay-chip--swift"><svg width="12" height="12" viewBox="0 0 16 16" aria-hidden="true"><path d="M1.5 5 8 1.8 14.5 5h-13ZM3 6.5v5m3-5v5m4-5v5m3-5v5M1.5 13h13" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" /></svg>SWIFT wire</span></li>
+            </ul>
+          </div>
+          <div class="sf-wrap sf-footer-bottom">
+            <p>© Taaffeite Origin 2026 · All rights reserved.</p>
+            <p>Demo preview</p>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <!-- Cart drawer and mobile menu: site.js shows these when the Cart / Menu buttons are pressed. -->
+    <template id="tpl-cart-drawer">
+      <div class="sf-drawer-backdrop" role="presentation">
+        <aside class="sf-drawer" role="dialog" aria-modal="true" aria-labelledby="cart-title">
+          <div class="sf-drawer-head">
+            <h2 id="cart-title">Your cart<span> ( 1 )</span></h2>
+            <button class="sf-text-btn" type="button">Close</button>
+          </div>
+          <div class="sf-drawer-items">
+            <article class="sf-cart-item">
+              <img
+                alt=""
+                src="assets/products/DSC01864.webp"
+              />
+              <div>
+                <div class="sf-cart-item-top">
+                  <h3>Blue Sapphire</h3>
+                  <strong>$5,400</strong>
+                </div>
+                <p>Sri Lanka · 3.42 ct</p>
+                <small>Certificate requested</small
+                ><small class="cart-hold-timer">Held for you · 09:24 remaining</small>
+                <div class="sf-qty">
+                  <button type="button" aria-label="Remove one Blue Sapphire"><span aria-hidden="true">−</span></button
+                  ><span>1</span
+                  ><button type="button" aria-label="Add one Blue Sapphire"><span aria-hidden="true">+</span></button>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="sf-drawer-foot">
+            <div class="sf-cart-total"><span>Illustrative subtotal</span><strong>$5,400</strong></div>
+            <button class="sf-btn sf-btn--primary sf-btn--block" type="button" data-href="checkout.html">
+              Continue to checkout
+            </button>
+            <p class="sf-fineprint">No payment details are collected and no order is placed.</p>
+          </div>
+        </aside>
+      </div>
+    </template>
+    <template id="tpl-mobile-menu">
+      <div id="sf-mobile-menu" class="sf-mobile-menu">
+        <nav aria-label="Main navigation">
+          <a href="buy-now.html" aria-current="page"
+            >Buy Now<svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-arrow-right"
+              aria-hidden="true"
+            >
+              <path d="M5 12h14"></path>
+              <path d="m12 5 7 7-7 7"></path></svg></a
+          ><a href="auctions.html"
+            >Auctions<svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-arrow-right"
+              aria-hidden="true"
+            >
+              <path d="M5 12h14"></path>
+              <path d="m12 5 7 7-7 7"></path></svg></a
+          ><a href="private-collection.html"
+            >Private Collection<svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-arrow-right"
+              aria-hidden="true"
+            >
+              <path d="M5 12h14"></path>
+              <path d="m12 5 7 7-7 7"></path></svg></a
+          ><a href="miners-path.html"
+            >Miner's Path<svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-arrow-right"
+              aria-hidden="true"
+            >
+              <path d="M5 12h14"></path>
+              <path d="m12 5 7 7-7 7"></path></svg></a
+          ><a href="contact.html"
+            >Contact Us<svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-arrow-right"
+              aria-hidden="true"
+            >
+              <path d="M5 12h14"></path>
+              <path d="m12 5 7 7-7 7"></path></svg></a
+          ><a href="account.html"
+            >Account<svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-arrow-right"
+              aria-hidden="true"
+            >
+              <path d="M5 12h14"></path>
+              <path d="m12 5 7 7-7 7"></path></svg
+          ></a>
+        </nav>
+        <div class="sf-mobile-menu-prefs">
+          <label class="sf-currency"
+            ><span>Currency</span
+            ><select>
+              <option value="USD">USD</option>
+              <option value="GBP">GBP</option>
+              <option value="LKR">LKR</option>
+            </select></label
+          ><button class="sf-text-btn" type="button" aria-pressed="false">Switch to dark theme</button>
+        </div>
+      </div>
+    </template>
+
+    <script src="site.js"></script>
+  </body>
+</html>

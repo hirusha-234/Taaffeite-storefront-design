@@ -1,0 +1,520 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Private Collection | Taaffeite Origin</title>
+    <meta name="description" content="Request private access to exceptional stones that are not listed publicly." />
+    <link rel="icon" type="image/png" href="assets/taaffeite-origin-logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&amp;family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,600&amp;display=swap" />
+    
+    <link rel="stylesheet" href="styles.css" />
+    <script>
+      try {
+        if (localStorage.getItem("taaffeite-origin-theme") === "dark") document.documentElement.dataset.theme = "dark";
+      } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <div id="root">
+      <div class="archive-site archive-site--vault" data-theme="light">
+        <header class="sf-header">
+          <div class="sf-header-inner">
+            <button
+              class="sf-text-btn sf-menu-toggle"
+              type="button"
+              aria-expanded="false"
+              aria-controls="sf-mobile-menu"
+              aria-label="Open menu"
+            >
+              Menu
+            </button>
+            <nav class="sf-nav" aria-label="Main navigation">
+              <a href="buy-now.html">Buy Now</a><a href="auctions.html">Auctions</a
+              ><a href="private-collection.html" aria-current="page">Private Collection</a>
+            </nav>
+            <a class="sf-brand sf-script-mark" href="home.html" aria-label="Taaffeite Origin home"
+              ><img class="sf-logo-image" src="assets/taaffeite-origin-logo.png" alt="" /></a>
+            <div class="sf-actions">
+              <nav class="sf-nav sf-nav--secondary" aria-label="Explore">
+                <a href="miners-path.html">Miner's Path</a><a href="contact.html">Contact Us</a>
+              </nav>
+              <a class="sf-text-btn sf-account-link" href="login.html" aria-label="User login" title="User login"
+                >Account</a
+              ><button class="sf-text-btn sf-cart-toggle" type="button" aria-label="Open cart, 0 items" title="Cart">
+                Cart ( 0 )</button
+              ><label class="sf-currency"
+                ><span class="sf-visually-hidden">Currency</span
+                ><select aria-label="Currency">
+                  <option value="USD" selected="">USD</option>
+                  <option value="GBP">GBP</option>
+                  <option value="LKR">LKR</option>
+                </select></label
+              ><button
+                class="sf-text-btn sf-theme-toggle"
+                type="button"
+                aria-pressed="false"
+                aria-label="Switch to dark theme"
+                title="Switch to dark theme"
+              >
+                Dark
+              </button>
+            </div>
+          </div>
+        </header>
+        <main class="vault-page vault-private-access">
+          <section class="vault-page-intro section-wrap" aria-labelledby="vault-page-title">
+            <a class="vault-back-link" href="home.html"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-arrow-left"
+                aria-hidden="true"
+              >
+                <path d="m12 19-7-7 7-7"></path>
+                <path d="M19 12H5"></path>
+              </svg>
+              Back to home</a
+            >
+            <p class="eyebrow">Private collection</p>
+            <h1 id="vault-page-title">Request private access</h1>
+            <p>Apply for an introduction to the private collection. Each request is reviewed individually.</p>
+          </section>
+          <div class="vault-content section-wrap">
+            <nav class="vault-step-nav" aria-label="Application steps">
+              <button type="button" class="vault-step is-current" aria-current="step" data-application-step="0">
+                <span class="vault-step-marker">1</span><span>Introduction</span></button
+              ><button type="button" class="vault-step" data-application-step="1">
+                <span class="vault-step-marker">2</span><span>Interest</span></button
+              ><button type="button" class="vault-step" data-application-step="2">
+                <span class="vault-step-marker">3</span><span>Collection</span></button
+              ><button type="button" class="vault-step" data-application-step="3">
+                <span class="vault-step-marker">4</span><span>Review</span>
+              </button>
+            </nav>
+            <section class="vault-form-panel" aria-label="Private collection application form">
+              <div class="vault-application-progress">
+                <div
+                  class="vault-progress-track"
+                  role="progressbar"
+                  aria-label="Application progress"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                  aria-valuenow="25"
+                  aria-valuetext="25% complete"
+                  data-application-progress-bar
+                >
+                  <span data-application-progress-fill style="width: 25%"></span>
+                </div>
+              </div>
+              <form class="vault-form" novalidate>
+                <section class="vault-step-panel" data-application-panel="0" aria-labelledby="introduction-step-title">
+                  <p class="vault-micro-label">Step 1 of 4</p>
+                  <h2 id="introduction-step-title" tabindex="-1">Begin with an introduction</h2>
+                  <div class="vault-form-grid">
+                    <label class="vault-field span-two"
+                      ><span>Applicant type *</span
+                      ><select name="applicantType">
+                        <option selected="">Individual buyer</option>
+                        <option>Business</option>
+                      </select></label
+                    ><label class="vault-field span-two"
+                      ><span>Full name *</span
+                      ><input autocomplete="name" required="" value="" name="fullName"
+                    /></label>
+                    <label class="vault-field"
+                      ><span>Email address *</span
+                      ><input autocomplete="email" required="" type="email" value="" name="email"
+                    /></label>
+                    <label class="vault-field"
+                      ><span>Contact number *</span
+                      ><input autocomplete="tel" required="" type="tel" value="" name="phone"
+                    /></label>
+                    <div class="vault-field country-picker" data-country-picker>
+                      <label class="country-picker-label" for="private-country">Country *</label>
+                      <div class="country-picker-control">
+                        <input
+                          id="private-country"
+                          autocomplete="off"
+                          aria-autocomplete="list"
+                          aria-controls="private-country-options"
+                          aria-expanded="false"
+                          aria-haspopup="listbox"
+                          placeholder="Select or search countries"
+                          role="combobox"
+                          required=""
+                          value=""
+                          name="country"
+                        />
+                        <svg viewBox="0 0 20 20" aria-hidden="true">
+                          <path d="m5 7.5 5 5 5-5"></path>
+                        </svg>
+                      </div>
+                      <div
+                        class="country-picker-options"
+                        id="private-country-options"
+                        role="listbox"
+                        aria-label="Countries"
+                        hidden
+                      ></div>
+                    </div>
+                    <label class="vault-field"
+                      ><span>Occupation / industry *</span
+                      ><input autocomplete="organization-title" required="" value="" name="occupation"
+                    /></label>
+                    <label class="vault-field span-two"
+                      ><span>Purpose of application *</span
+                      ><textarea name="purpose" rows="2" required=""></textarea>
+                    </label>
+                  </div>
+                  <div class="vault-form-actions">
+                    <button class="vault-button is-primary" type="button" data-application-next>
+                      Continue<svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="14"
+                        height="14"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        aria-hidden="true"
+                      >
+                        <path d="M5 12h14"></path>
+                        <path d="m12 5 7 7-7 7"></path>
+                      </svg>
+                    </button>
+                  </div>
+                </section>
+                <section class="vault-step-panel" data-application-panel="1" aria-labelledby="interest-step-title" hidden>
+                  <p class="vault-micro-label">Step 2 of 4</p>
+                  <h2 id="interest-step-title" tabindex="-1">Tell us about your interests</h2>
+                  <div class="vault-form-grid">
+                    <label class="vault-field span-two"
+                      ><span>Primary area of interest *</span
+                      ><select name="gemstoneInterest" required="">
+                        <option value="" selected="">Select an area of interest</option>
+                        <option>Sapphires</option>
+                        <option>Rubies</option>
+                        <option>Emeralds</option>
+                        <option>Spinels</option>
+                        <option>Taaffeite</option>
+                        <option>Other gemstones</option>
+                      </select></label
+                    >
+                    <label class="vault-field span-two"
+                      ><span>What are you hoping to find? <small>Optional</small></span
+                      ><textarea name="interestDetails" rows="3"></textarea></label
+                    >
+                  </div>
+                  <div class="vault-form-actions">
+                    <button class="vault-button is-secondary" type="button" data-application-previous>Back</button>
+                    <button class="vault-button is-primary" type="button" data-application-next>Continue</button>
+                  </div>
+                </section>
+                <section class="vault-step-panel" data-application-panel="2" aria-labelledby="collection-step-title" hidden>
+                  <p class="vault-micro-label">Step 3 of 4</p>
+                  <h2 id="collection-step-title" tabindex="-1">Your collection preferences</h2>
+                  <div class="vault-form-grid">
+                    <label class="vault-field span-two"
+                      ><span>What best describes your collecting goals? *</span
+                      ><select name="collectionGoal" required="">
+                        <option value="" selected="">Select a collecting goal</option>
+                        <option>Building my first collection</option>
+                        <option>Expanding an existing collection</option>
+                        <option>Finding a specific gemstone</option>
+                        <option>Exploring the private collection</option>
+                      </select></label
+                    >
+                    <label class="vault-field span-two"
+                      ><span>Preferred contact method *</span
+                      ><select name="contactPreference" required="">
+                        <option value="" selected="">Select a contact method</option>
+                        <option>Email</option>
+                        <option>Phone</option>
+                        <option>Either email or phone</option>
+                      </select></label
+                    >
+                    <label class="vault-field span-two"
+                      ><span>Anything else we should know? <small>Optional</small></span
+                      ><textarea name="collectionNotes" rows="3"></textarea></label
+                    >
+                  </div>
+                  <div class="vault-form-actions">
+                    <button class="vault-button is-secondary" type="button" data-application-previous>Back</button>
+                    <button class="vault-button is-primary" type="button" data-application-next>Continue</button>
+                  </div>
+                </section>
+                <section class="vault-step-panel" data-application-panel="3" aria-labelledby="review-step-title" hidden>
+                  <p class="vault-micro-label">Step 4 of 4</p>
+                  <h2 id="review-step-title" tabindex="-1">Review your application</h2>
+                  <dl class="vault-review-list">
+                    <div><dt>Applicant type</dt><dd data-review-value="applicantType">Not provided</dd></div>
+                    <div><dt>Name</dt><dd data-review-value="fullName">Not provided</dd></div>
+                    <div><dt>Email</dt><dd data-review-value="email">Not provided</dd></div>
+                    <div><dt>Phone</dt><dd data-review-value="phone">Not provided</dd></div>
+                    <div><dt>Country</dt><dd data-review-value="country">Not provided</dd></div>
+                    <div><dt>Occupation</dt><dd data-review-value="occupation">Not provided</dd></div>
+                    <div><dt>Purpose</dt><dd data-review-value="purpose">Not provided</dd></div>
+                    <div><dt>Primary interest</dt><dd data-review-value="gemstoneInterest">Not provided</dd></div>
+                    <div><dt>Interest details</dt><dd data-review-value="interestDetails">Not provided</dd></div>
+                    <div><dt>Collecting goal</dt><dd data-review-value="collectionGoal">Not provided</dd></div>
+                    <div><dt>Preferred contact</dt><dd data-review-value="contactPreference">Not provided</dd></div>
+                    <div><dt>Collection notes</dt><dd data-review-value="collectionNotes">Not provided</dd></div>
+                  </dl>
+                  <label class="vault-choice">
+                    <input type="checkbox" name="applicationConsent" required="" />
+                    <span>I confirm these details are accurate and agree to be contacted about my application.</span>
+                  </label>
+                  <div class="vault-form-actions">
+                    <button class="vault-button is-secondary" type="button" data-application-previous>Back</button>
+                    <button class="vault-button is-primary" type="submit">Submit application</button>
+                  </div>
+                </section>
+                <section class="vault-success" data-application-success role="status" aria-live="polite" hidden>
+                  <h2 tabindex="-1">Application complete</h2>
+                  <p>Thank you for your interest. This preview does not save or send your application details.</p>
+                </section>
+              </form>
+            </section>
+            <aside class="vault-specimen">
+              <figure class="vault-specimen-plate">
+                <img alt="Violet gemstones arranged in soft natural light" src="assets/taaffeite-home-hero.jpg" />
+                <figcaption>Violet taaffeite, Sri Lanka</figcaption>
+              </figure>
+              <h3>A considered process</h3>
+              <p>Four short steps. Move between them at any time without losing what you have entered.</p>
+            </aside>
+          </div>
+        </main>
+                                <footer class="sf-footer">
+          <img class="sf-footer-ghost" src="assets/taaffeite-origin-logo.png" alt="" aria-hidden="true" />
+          <div class="sf-wrap sf-footer-hero">
+            <h2 class="sf-footer-title">Rare &amp; Ethically</h2>
+            <p class="sf-footer-contact">Sourced gemstones in Sri Lanka and beyond</p>
+          </div>
+          <div class="sf-wrap sf-footer-main">
+            <div class="sf-footer-brand-col">
+              <a class="sf-footer-brand" href="home.html" aria-label="Taaffeite Origin home">
+                <span>Taaffeite Origin</span>
+              </a>
+              <p class="sf-footer-description">Rare gemstones. Rooted in Sri Lanka.</p>
+              <h2 class="sf-footer-social-title">Socials</h2>
+              <div class="sf-footer-social-links" role="group" aria-label="Social channels">
+                <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer" aria-label="LinkedIn (opens in a new tab)"><img src="assets/social/linkedin.svg" alt="" /></a>
+                <a href="https://www.facebook.com/" target="_blank" rel="noreferrer" aria-label="Facebook (opens in a new tab)"><img src="assets/social/facebook.svg" alt="" /></a>
+                <a href="https://www.instagram.com/" target="_blank" rel="noreferrer" aria-label="Instagram (opens in a new tab)"><img src="assets/social/instagram.svg" alt="" /></a>
+                <a href="https://x.com/" target="_blank" rel="noreferrer" aria-label="X (opens in a new tab)"><img src="assets/social/x.svg" alt="" /></a>
+                <a href="https://www.pinterest.com/" target="_blank" rel="noreferrer" aria-label="Pinterest (opens in a new tab)"><img src="assets/social/pinterest-mark.svg" alt="" /></a>
+              </div>
+            </div>
+            <nav class="sf-footer-col" aria-label="Quick links">
+              <h2>Quick links</h2>
+              <a href="home.html#origin">About us</a>
+              <a href="miners-path.html">Miner's Path</a>
+              <a href="home.html#newsletter-title">Newsletter</a>
+              <a href="account.html">Account overview</a>
+              <a href="privacy.html">Privacy policy</a>
+              <a href="terms.html">Terms and conditions</a>
+            </nav>
+            <nav class="sf-footer-col" aria-label="Our services">
+              <h2>Our services</h2>
+              <a href="contact.html#contact-stone-fields">Request a stone</a>
+              <a href="track-order.html">Track an order</a>
+              <a href="buy-now.html">Browse gemstones</a>
+              <a href="auctions.html">Auctions</a>
+              <a href="private-collection.html">Private collection</a>
+              <a href="contact.html">Certificate enquiries</a>
+            </nav>
+            <div class="sf-footer-col sf-footer-contact-col">
+              <h2>Contact us</h2>
+              <div class="sf-footer-contact-list">
+                <p>Colombo, Sri Lanka</p>
+                <p><a href="mailto:support@taaffeite.com">support@taaffeite.com</a></p>
+                <p>Details available when live contact is connected</p>
+                <a class="sf-footer-contact-link" href="contact.html">Contact form<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M8 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg></a>
+              </div>
+            </div>
+          </div>
+          <div class="sf-wrap sf-footer-pay">
+            <h2>We accept</h2>
+            <ul>
+              <li><span class="sf-pay-chip sf-pay-chip--bank"><svg width="12" height="12" viewBox="0 0 16 16" aria-hidden="true"><path d="M1.5 5 8 1.8 14.5 5h-13ZM3 6.5v5m3-5v5m4-5v5m3-5v5M1.5 13h13" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" /></svg>Bank transfer</span></li>
+              <li><span class="sf-pay-chip sf-pay-chip--swift"><svg width="12" height="12" viewBox="0 0 16 16" aria-hidden="true"><path d="M1.5 5 8 1.8 14.5 5h-13ZM3 6.5v5m3-5v5m4-5v5m3-5v5M1.5 13h13" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" /></svg>SWIFT wire</span></li>
+            </ul>
+          </div>
+          <div class="sf-wrap sf-footer-bottom">
+            <p>© Taaffeite Origin 2026 · All rights reserved.</p>
+            <p>Demo preview</p>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <!-- Cart drawer and mobile menu: site.js shows these when the Cart / Menu buttons are pressed. -->
+    <template id="tpl-cart-drawer">
+      <div class="sf-drawer-backdrop" role="presentation">
+        <aside class="sf-drawer" role="dialog" aria-modal="true" aria-labelledby="cart-title">
+          <div class="sf-drawer-head">
+            <h2 id="cart-title">Your cart<span> ( 1 )</span></h2>
+            <button class="sf-text-btn" type="button">Close</button>
+          </div>
+          <div class="sf-drawer-items">
+            <article class="sf-cart-item">
+              <img
+                alt=""
+                src="assets/products/DSC01864.webp"
+              />
+              <div>
+                <div class="sf-cart-item-top">
+                  <h3>Blue Sapphire</h3>
+                  <strong>$5,400</strong>
+                </div>
+                <p>Sri Lanka · 3.42 ct</p>
+                <small>Certificate requested</small
+                ><small class="cart-hold-timer">Held for you · 09:24 remaining</small>
+                <div class="sf-qty">
+                  <button type="button" aria-label="Remove one Blue Sapphire"><span aria-hidden="true">−</span></button
+                  ><span>1</span
+                  ><button type="button" aria-label="Add one Blue Sapphire"><span aria-hidden="true">+</span></button>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="sf-drawer-foot">
+            <div class="sf-cart-total"><span>Illustrative subtotal</span><strong>$5,400</strong></div>
+            <button class="sf-btn sf-btn--primary sf-btn--block" type="button" data-href="checkout.html">
+              Continue to checkout
+            </button>
+            <p class="sf-fineprint">No payment details are collected and no order is placed.</p>
+          </div>
+        </aside>
+      </div>
+    </template>
+    <template id="tpl-mobile-menu">
+      <div id="sf-mobile-menu" class="sf-mobile-menu">
+        <nav aria-label="Main navigation">
+          <a href="buy-now.html" aria-current="page"
+            >Buy Now<svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-arrow-right"
+              aria-hidden="true"
+            >
+              <path d="M5 12h14"></path>
+              <path d="m12 5 7 7-7 7"></path></svg></a
+          ><a href="auctions.html"
+            >Auctions<svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-arrow-right"
+              aria-hidden="true"
+            >
+              <path d="M5 12h14"></path>
+              <path d="m12 5 7 7-7 7"></path></svg></a
+          ><a href="private-collection.html"
+            >Private Collection<svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-arrow-right"
+              aria-hidden="true"
+            >
+              <path d="M5 12h14"></path>
+              <path d="m12 5 7 7-7 7"></path></svg></a
+          ><a href="miners-path.html"
+            >Miner's Path<svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-arrow-right"
+              aria-hidden="true"
+            >
+              <path d="M5 12h14"></path>
+              <path d="m12 5 7 7-7 7"></path></svg></a
+          ><a href="contact.html"
+            >Contact Us<svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-arrow-right"
+              aria-hidden="true"
+            >
+              <path d="M5 12h14"></path>
+              <path d="m12 5 7 7-7 7"></path></svg></a
+          ><a href="account.html"
+            >Account<svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-arrow-right"
+              aria-hidden="true"
+            >
+              <path d="M5 12h14"></path>
+              <path d="m12 5 7 7-7 7"></path></svg
+          ></a>
+        </nav>
+        <div class="sf-mobile-menu-prefs">
+          <label class="sf-currency"
+            ><span>Currency</span
+            ><select>
+              <option value="USD">USD</option>
+              <option value="GBP">GBP</option>
+              <option value="LKR">LKR</option>
+            </select></label
+          ><button class="sf-text-btn" type="button" aria-pressed="false">Switch to dark theme</button>
+        </div>
+      </div>
+    </template>
+
+    <script src="site.js"></script>
+  </body>
+</html>

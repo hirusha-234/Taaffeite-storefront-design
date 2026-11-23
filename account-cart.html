@@ -1,0 +1,443 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Taaffeite Origin</title>
+    <meta
+      name="description"
+      content="Rare, ethically sourced gemstones from Sri Lanka and beyond. Buy certified stones directly, join live auctions, or request private access to exceptional specimens."
+    />
+    <link rel="icon" type="image/png" href="assets/taaffeite-origin-logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&amp;family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,600&amp;display=swap" />
+    
+    <link rel="stylesheet" href="styles.css" />
+    <script>
+      try {
+        if (localStorage.getItem("taaffeite-origin-theme") === "dark") document.documentElement.dataset.theme = "dark";
+      } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <div id="root">
+      <div class="archive-site archive-site--vault" data-theme="light">
+        <header class="sf-header">
+          <div class="sf-header-inner">
+            <button
+              class="sf-text-btn sf-menu-toggle"
+              type="button"
+              aria-expanded="false"
+              aria-controls="sf-mobile-menu"
+              aria-label="Open menu"
+            >
+              Menu
+            </button>
+            <nav class="sf-nav" aria-label="Main navigation">
+              <a href="buy-now.html">Buy Now</a><a href="auctions.html">Auctions</a
+              ><a href="private-collection.html">Private Collection</a>
+            </nav>
+            <a class="sf-brand sf-script-mark" href="home.html" aria-label="Taaffeite Origin home"
+              ><img class="sf-logo-image" src="assets/taaffeite-origin-logo.png" alt="" /></a>
+            <div class="sf-actions">
+              <nav class="sf-nav sf-nav--secondary" aria-label="Explore">
+                <a href="miners-path.html">Miner's Path</a><a href="contact.html">Contact Us</a>
+              </nav>
+              <a class="sf-text-btn sf-account-link" href="account.html" aria-label="User login" title="User login"
+                >Account</a
+              ><button class="sf-text-btn sf-cart-toggle" type="button" aria-label="Open cart, 1 items" title="Cart">
+                Cart ( 1 )</button
+              ><label class="sf-currency"
+                ><span class="sf-visually-hidden">Currency</span
+                ><select aria-label="Currency">
+                  <option value="USD" selected="">USD</option>
+                  <option value="GBP">GBP</option>
+                  <option value="LKR">LKR</option>
+                </select></label
+              ><button
+                class="sf-text-btn sf-theme-toggle"
+                type="button"
+                aria-pressed="false"
+                aria-label="Switch to dark theme"
+                title="Switch to dark theme"
+              >
+                Dark
+              </button>
+            </div>
+          </div>
+        </header>
+        <main class="vault-page account-page">
+          <section class="account-hero section-wrap" aria-labelledby="account-title">
+            <div>
+              <a class="vault-back-link" href="home.html"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-arrow-left"
+                  aria-hidden="true"
+                >
+                  <path d="m12 19-7-7 7-7"></path>
+                  <path d="M19 12H5"></path>
+                </svg>
+                Back to home</a
+              >
+              <h1 class="sf-visually-hidden" id="account-title">Your dashboard</h1>
+            </div>
+            <div class="account-menu-wrap">
+              <button
+                class="account-menu-toggle"
+                type="button"
+                aria-expanded="false"
+                aria-controls="account-user-menu"
+              >
+                <span class="account-menu-avatar" aria-hidden="true">CH</span>
+                <span>Charlotte Hughes</span>
+                <svg aria-hidden="true" viewBox="0 0 16 16" width="14" height="14">
+                  <path d="m4 6 4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" />
+                </svg>
+              </button>
+              <div class="account-identity" id="account-user-menu" hidden>
+                <p class="account-menu-email">client@taaffeite.demo</p>
+                <p class="account-collection-status">
+                  <span class="account-collection-status-dot" aria-hidden="true"></span>
+                  <span>Private Collection: Not a member</span>
+                </p>
+                <a class="account-menu-action" href="account-profile.html">Edit Details</a>
+                <button class="account-signout-button" type="button">Sign out</button>
+              </div>
+            </div>
+          </section>
+          <section class="account-panel section-wrap" aria-live="polite" aria-labelledby="account-panel-title">
+            <div class="account-settings-layout">
+              <nav class="account-settings-nav" aria-label="Account sections">
+                <p class="account-settings-label">My account</p>
+                <a href="account.html">Overview</a>
+                <a href="account-profile.html">Personal details</a>
+                <p class="account-settings-label">My activity</p>
+                <a href="account-orders.html">Orders</a>
+                <a href="account-transactions.html">Transactions</a>
+                <a href="account-bids.html">Auction bids</a>
+                <a href="account-activity.html">Recent activity</a>
+                <p class="account-settings-label">My collection</p>
+                <a href="account-cart.html" aria-current="page">Saved cart</a>
+                <a href="buy-now.html">Browse gemstones</a>
+              </nav>
+              <div class="account-section-content">
+                <div class="account-panel-heading">
+                  <h2 id="account-panel-title">Your cart</h2>
+                  <p>Items you have added to your cart are gathered here.</p>
+                </div>
+                <div class="account-cart">
+              <ul class="account-cart-list" aria-label="Items in your cart">
+                <li>
+                  <div><strong>Blue Sapphire</strong><small>Product ID: direct-001 · Quantity: 1</small></div>
+                  <span>$5,400</span
+                  ><button type="button" class="activity-product-link">
+                    View product
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="12"
+                      height="12"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-arrow-up-right"
+                      aria-hidden="true"
+                    >
+                      <path d="M7 7h10v10"></path>
+                      <path d="M7 17 17 7"></path>
+                    </svg>
+                  </button>
+                </li>
+              </ul>
+              <div class="sf-cart-certificate-option">
+                <label class="sf-check account-cart-certificate"
+                  ><input type="checkbox" checked="" /><span
+                    ><strong>Request a certificate</strong
+                    ><small>Selected by default. Untick if you do not need one.</small></span
+                  ></label
+                >
+                <span class="sf-certificate-tooltip">
+                  <button
+                    class="sf-certificate-tooltip-trigger"
+                    type="button"
+                    aria-label="More information about gemstone certificates"
+                    aria-describedby="account-cart-certificate-info"
+                  >
+                    <svg viewBox="0 0 20 20" aria-hidden="true">
+                      <circle cx="10" cy="10" r="8"></circle>
+                      <path d="M10 9v5m0-8h.01"></path>
+                    </svg>
+                  </button>
+                  <span class="sf-certificate-tooltip-content" id="account-cart-certificate-info" role="tooltip"
+                    >All gemstone certificates offered or requested on the platform are authentic local Sri Lankan
+                    certificates issued by legally recognised, legitimate gemological testing authorities.</span
+                  >
+                </span>
+              </div>
+              <p><strong>Cart total: $5,400</strong></p>
+              <button class="vault-button is-primary" type="button">
+                Manage cart
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-arrow-up-right"
+                  aria-hidden="true"
+                >
+                  <path d="M7 7h10v10"></path>
+                  <path d="M7 17 17 7"></path>
+                </svg>
+              </button>
+              <p class="vault-disclaimer">No payments are collected and no order is placed.</p>
+                </div>
+              </div>
+              <aside class="account-completion" aria-labelledby="account-summary-title">
+                <p class="eyebrow">Account status</p>
+                <h3 id="account-summary-title">Profile completeness</h3>
+                <div class="account-completion-meter" role="img" aria-label="Profile overview, 60 percent"><span>60%</span></div>
+                <p class="account-completion-label">Profile overview · Demo preview</p>
+                <a class="account-inline-link" href="account-profile.html">Account settings <span aria-hidden="true">↗</span></a>
+                <p class="account-completion-note">A visual demo only. No account data is stored or verified.</p>
+              </aside>
+            </div>
+          </section>
+        </main>
+                                <footer class="sf-footer">
+          <img class="sf-footer-ghost" src="assets/taaffeite-origin-logo.png" alt="" aria-hidden="true" />
+          <div class="sf-wrap sf-footer-hero">
+            <h2 class="sf-footer-title">Rare &amp; Ethically</h2>
+            <p class="sf-footer-contact">Sourced gemstones in Sri Lanka and beyond</p>
+          </div>
+          <div class="sf-wrap sf-footer-main">
+            <div class="sf-footer-brand-col">
+              <a class="sf-footer-brand" href="home.html" aria-label="Taaffeite Origin home">
+                <span>Taaffeite Origin</span>
+              </a>
+              <p class="sf-footer-description">Rare gemstones. Rooted in Sri Lanka.</p>
+              <h2 class="sf-footer-social-title">Socials</h2>
+              <div class="sf-footer-social-links" role="group" aria-label="Social channels">
+                <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer" aria-label="LinkedIn (opens in a new tab)"><img src="assets/social/linkedin.svg" alt="" /></a>
+                <a href="https://www.facebook.com/" target="_blank" rel="noreferrer" aria-label="Facebook (opens in a new tab)"><img src="assets/social/facebook.svg" alt="" /></a>
+                <a href="https://www.instagram.com/" target="_blank" rel="noreferrer" aria-label="Instagram (opens in a new tab)"><img src="assets/social/instagram.svg" alt="" /></a>
+                <a href="https://x.com/" target="_blank" rel="noreferrer" aria-label="X (opens in a new tab)"><img src="assets/social/x.svg" alt="" /></a>
+                <a href="https://www.pinterest.com/" target="_blank" rel="noreferrer" aria-label="Pinterest (opens in a new tab)"><img src="assets/social/pinterest-mark.svg" alt="" /></a>
+              </div>
+            </div>
+            <nav class="sf-footer-col" aria-label="Quick links">
+              <h2>Quick links</h2>
+              <a href="home.html#origin">About us</a>
+              <a href="miners-path.html">Miner's Path</a>
+              <a href="home.html#newsletter-title">Newsletter</a>
+              <a href="account.html">Account overview</a>
+              <a href="privacy.html">Privacy policy</a>
+              <a href="terms.html">Terms and conditions</a>
+            </nav>
+            <nav class="sf-footer-col" aria-label="Our services">
+              <h2>Our services</h2>
+              <a href="contact.html#contact-stone-fields">Request a stone</a>
+              <a href="track-order.html">Track an order</a>
+              <a href="buy-now.html">Browse gemstones</a>
+              <a href="auctions.html">Auctions</a>
+              <a href="private-collection.html">Private collection</a>
+              <a href="contact.html">Certificate enquiries</a>
+            </nav>
+            <div class="sf-footer-col sf-footer-contact-col">
+              <h2>Contact us</h2>
+              <div class="sf-footer-contact-list">
+                <p>Colombo, Sri Lanka</p>
+                <p><a href="mailto:support@taaffeite.com">support@taaffeite.com</a></p>
+                <p>Details available when live contact is connected</p>
+                <a class="sf-footer-contact-link" href="contact.html">Contact form<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M8 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg></a>
+              </div>
+            </div>
+          </div>
+          <div class="sf-wrap sf-footer-pay">
+            <h2>We accept</h2>
+            <ul>
+              <li><span class="sf-pay-chip sf-pay-chip--bank"><svg width="12" height="12" viewBox="0 0 16 16" aria-hidden="true"><path d="M1.5 5 8 1.8 14.5 5h-13ZM3 6.5v5m3-5v5m4-5v5m3-5v5M1.5 13h13" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" /></svg>Bank transfer</span></li>
+              <li><span class="sf-pay-chip sf-pay-chip--swift"><svg width="12" height="12" viewBox="0 0 16 16" aria-hidden="true"><path d="M1.5 5 8 1.8 14.5 5h-13ZM3 6.5v5m3-5v5m4-5v5m3-5v5M1.5 13h13" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" /></svg>SWIFT wire</span></li>
+            </ul>
+          </div>
+          <div class="sf-wrap sf-footer-bottom">
+            <p>© Taaffeite Origin 2026 · All rights reserved.</p>
+            <p>Demo preview</p>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <!-- Cart drawer and mobile menu: site.js shows these when the Cart / Menu buttons are pressed. -->
+    <template id="tpl-cart-drawer">
+      <div class="sf-drawer-backdrop" role="presentation">
+        <aside class="sf-drawer" role="dialog" aria-modal="true" aria-labelledby="cart-title">
+          <div class="sf-drawer-head">
+            <h2 id="cart-title">Your cart<span> ( 1 )</span></h2>
+            <button class="sf-text-btn" type="button">Close</button>
+          </div>
+          <div class="sf-drawer-items">
+            <article class="sf-cart-item">
+              <img
+                alt=""
+                src="assets/products/DSC01864.webp"
+              />
+              <div>
+                <div class="sf-cart-item-top">
+                  <h3>Blue Sapphire</h3>
+                  <strong>$5,400</strong>
+                </div>
+                <p>Sri Lanka · 3.42 ct</p>
+                <small>Certificate requested</small
+                ><small class="cart-hold-timer">Held for you · 09:24 remaining</small>
+                <div class="sf-qty">
+                  <button type="button" aria-label="Remove one Blue Sapphire"><span aria-hidden="true">−</span></button
+                  ><span>1</span
+                  ><button type="button" aria-label="Add one Blue Sapphire"><span aria-hidden="true">+</span></button>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="sf-drawer-foot">
+            <div class="sf-cart-total"><span>Illustrative subtotal</span><strong>$5,400</strong></div>
+            <button class="sf-btn sf-btn--primary sf-btn--block" type="button" data-href="checkout.html">
+              Continue to checkout
+            </button>
+            <p class="sf-fineprint">No payment details are collected and no order is placed.</p>
+          </div>
+        </aside>
+      </div>
+    </template>
+    <template id="tpl-mobile-menu">
+      <div id="sf-mobile-menu" class="sf-mobile-menu">
+        <nav aria-label="Main navigation">
+          <a href="buy-now.html" aria-current="page"
+            >Buy Now<svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-arrow-right"
+              aria-hidden="true"
+            >
+              <path d="M5 12h14"></path>
+              <path d="m12 5 7 7-7 7"></path></svg></a
+          ><a href="auctions.html"
+            >Auctions<svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-arrow-right"
+              aria-hidden="true"
+            >
+              <path d="M5 12h14"></path>
+              <path d="m12 5 7 7-7 7"></path></svg></a
+          ><a href="private-collection.html"
+            >Private Collection<svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-arrow-right"
+              aria-hidden="true"
+            >
+              <path d="M5 12h14"></path>
+              <path d="m12 5 7 7-7 7"></path></svg></a
+          ><a href="miners-path.html"
+            >Miner's Path<svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-arrow-right"
+              aria-hidden="true"
+            >
+              <path d="M5 12h14"></path>
+              <path d="m12 5 7 7-7 7"></path></svg></a
+          ><a href="contact.html"
+            >Contact Us<svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-arrow-right"
+              aria-hidden="true"
+            >
+              <path d="M5 12h14"></path>
+              <path d="m12 5 7 7-7 7"></path></svg></a
+          ><a href="account.html"
+            >Account<svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-arrow-right"
+              aria-hidden="true"
+            >
+              <path d="M5 12h14"></path>
+              <path d="m12 5 7 7-7 7"></path></svg
+          ></a>
+        </nav>
+        <div class="sf-mobile-menu-prefs">
+          <label class="sf-currency"
+            ><span>Currency</span
+            ><select>
+              <option value="USD">USD</option>
+              <option value="GBP">GBP</option>
+              <option value="LKR">LKR</option>
+            </select></label
+          ><button class="sf-text-btn" type="button" aria-pressed="false">Switch to dark theme</button>
+        </div>
+      </div>
+    </template>
+
+    <script src="site.js"></script>
+  </body>
+</html>

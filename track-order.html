@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Track your order | Taaffeite Origin</title>
+    <meta name="description" content="Follow your Taaffeite Origin order from payment verification to delivery." />
+    <link rel="icon" type="image/png" href="assets/taaffeite-origin-logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&amp;family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,600&amp;display=swap" />
+    
+    <link rel="stylesheet" href="styles.css" />
+    <script>
+      try {
+        if (localStorage.getItem("taaffeite-origin-theme") === "dark") document.documentElement.dataset.theme = "dark";
+      } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <div id="root">
+      <div class="archive-site" data-theme="light">
+        <header class="sf-header">
+          <div class="sf-header-inner">
+            <button
+              class="sf-text-btn sf-menu-toggle"
+              type="button"
+              aria-expanded="false"
+              aria-controls="sf-mobile-menu"
+              aria-label="Open menu"
+            >
+              Menu
+            </button>
+            <nav class="sf-nav" aria-label="Main navigation">
+              <a href="buy-now.html">Buy Now</a><a href="auctions.html">Auctions</a
+              ><a href="private-collection.html">Private Collection</a>
+            </nav>
+            <a class="sf-brand sf-script-mark" href="home.html" aria-label="Taaffeite Origin home"
+              ><img class="sf-logo-image" src="assets/taaffeite-origin-logo.png" alt="" /></a>
+            <div class="sf-actions">
+              <nav class="sf-nav sf-nav--secondary" aria-label="Explore">
+                <a href="miners-path.html">Miner's Path</a><a href="contact.html">Contact Us</a>
+              </nav>
+              <a class="sf-text-btn sf-account-link" href="account.html" aria-label="User login" title="User login"
+                >Account</a
+              ><button class="sf-text-btn sf-cart-toggle" type="button" aria-label="Open cart, 1 items" title="Cart">
+                Cart ( 1 )</button
+              ><label class="sf-currency"
+                ><span class="sf-visually-hidden">Currency</span
+                ><select aria-label="Currency">
+                  <option value="USD" selected="">USD</option>
+                  <option value="GBP">GBP</option>
+                  <option value="LKR">LKR</option>
+                </select></label
+              ><button
+                class="sf-text-btn sf-theme-toggle"
+                type="button"
+                aria-pressed="false"
+                aria-label="Switch to dark theme"
+                title="Switch to dark theme"
+              >
+                Dark
+              </button>
+            </div>
+          </div>
+        </header>
+        <main class="sf-track sf-wrap" aria-labelledby="track-title">
+          <header class="sf-page-head sf-track-head">
+            <p class="sf-eyebrow">Order tracking</p>
+            <h1 id="track-title">Track your order</h1>
+            <p class="sf-lede">
+              Follow a stone from checkout to your door: payment, preparation, courier handover and delivery.
+            </p>
+          </header>
+          <form class="sf-track-form" role="search">
+            <label for="track-reference">Order reference</label>
+            <div class="sf-track-form-row">
+              <input
+                id="track-reference"
+                list="track-references"
+                placeholder="TO-…"
+                autocomplete="off"
+                spellcheck="false"
+                value=""
+              /><datalist id="track-references">
+                <option value="TO-DEMO1005"></option>
+                <option value="TO-DEMO1001"></option></datalist
+              ><button type="submit" class="sf-btn sf-btn--primary">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="15"
+                  height="15"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-search"
+                  aria-hidden="true"
+                >
+                  <path d="m21 21-4.34-4.34"></path>
+                  <circle cx="11" cy="11" r="8"></circle></svg
+                >Track
+              </button>
+            </div>
+          </form>
+          <section class="sf-track-list" aria-labelledby="track-list-title">
+            <h2 id="track-list-title">Your orders</h2>
+            <ul>
+              <li>
+                <button type="button" aria-pressed="false">
+                  <span class="sf-track-list-ref">TO-DEMO1005</span
+                  ><span class="sf-track-list-meta">11/17/2026 · $3,150</span
+                  ><span class="sf-track-pill is-pending">Awaiting payment</span>
+                </button>
+              </li>
+              <li>
+                <button type="button" aria-pressed="false">
+                  <span class="sf-track-list-ref">TO-DEMO1001</span
+                  ><span class="sf-track-list-meta">10/26/2026 · $9,800</span
+                  ><span class="sf-track-pill is-success">Processing</span>
+                </button>
+              </li>
+            </ul>
+          </section>
+        </main>
+                                <footer class="sf-footer">
+          <img class="sf-footer-ghost" src="assets/taaffeite-origin-logo.png" alt="" aria-hidden="true" />
+          <div class="sf-wrap sf-footer-hero">
+            <h2 class="sf-footer-title">Rare &amp; Ethically</h2>
+            <p class="sf-footer-contact">Sourced gemstones in Sri Lanka and beyond</p>
+          </div>
+          <div class="sf-wrap sf-footer-main">
+            <div class="sf-footer-brand-col">
+              <a class="sf-footer-brand" href="home.html" aria-label="Taaffeite Origin home">
+                <span>Taaffeite Origin</span>
+              </a>
+              <p class="sf-footer-description">Rare gemstones. Rooted in Sri Lanka.</p>
+              <h2 class="sf-footer-social-title">Socials</h2>
+              <div class="sf-footer-social-links" role="group" aria-label="Social channels">
+                <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer" aria-label="LinkedIn (opens in a new tab)"><img src="assets/social/linkedin.svg" alt="" /></a>
+                <a href="https://www.facebook.com/" target="_blank" rel="noreferrer" aria-label="Facebook (opens in a new tab)"><img src="assets/social/facebook.svg" alt="" /></a>
+                <a href="https://www.instagram.com/" target="_blank" rel="noreferrer" aria-label="Instagram (opens in a new tab)"><img src="assets/social/instagram.svg" alt="" /></a>
+                <a href="https://x.com/" target="_blank" rel="noreferrer" aria-label="X (opens in a new tab)"><img src="assets/social/x.svg" alt="" /></a>
+                <a href="https://www.pinterest.com/" target="_blank" rel="noreferrer" aria-label="Pinterest (opens in a new tab)"><img src="assets/social/pinterest-mark.svg" alt="" /></a>
+              </div>
+            </div>
+            <nav class="sf-footer-col" aria-label="Quick links">
+              <h2>Quick links</h2>
+              <a href="home.html#origin">About us</a>
+              <a href="miners-path.html">Miner's Path</a>
+              <a href="home.html#newsletter-title">Newsletter</a>
+              <a href="account.html">Account overview</a>
+              <a href="privacy.html">Privacy policy</a>
+              <a href="terms.html">Terms and conditions</a>
+            </nav>
+            <nav class="sf-footer-col" aria-label="Our services">
+              <h2>Our services</h2>
+              <a href="contact.html#contact-stone-fields">Request a stone</a>
+              <a href="track-order.html">Track an order</a>
+              <a href="buy-now.html">Browse gemstones</a>
+              <a href="auctions.html">Auctions</a>
+              <a href="private-collection.html">Private collection</a>
+              <a href="contact.html">Certificate enquiries</a>
+            </nav>
+            <div class="sf-footer-col sf-footer-contact-col">
+              <h2>Contact us</h2>
+              <div class="sf-footer-contact-list">
+                <p>Colombo, Sri Lanka</p>
+                <p><a href="mailto:support@taaffeite.com">support@taaffeite.com</a></p>
+                <p>Details available when live contact is connected</p>
+                <a class="sf-footer-contact-link" href="contact.html">Contact form<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M8 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg></a>
+              </div>
+            </div>
+          </div>
+          <div class="sf-wrap sf-footer-pay">
+            <h2>We accept</h2>
+            <ul>
+              <li><span class="sf-pay-chip sf-pay-chip--bank"><svg width="12" height="12" viewBox="0 0 16 16" aria-hidden="true"><path d="M1.5 5 8 1.8 14.5 5h-13ZM3 6.5v5m3-5v5m4-5v5m3-5v5M1.5 13h13" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" /></svg>Bank transfer</span></li>
+              <li><span class="sf-pay-chip sf-pay-chip--swift"><svg width="12" height="12" viewBox="0 0 16 16" aria-hidden="true"><path d="M1.5 5 8 1.8 14.5 5h-13ZM3 6.5v5m3-5v5m4-5v5m3-5v5M1.5 13h13" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" /></svg>SWIFT wire</span></li>
+            </ul>
+          </div>
+          <div class="sf-wrap sf-footer-bottom">
+            <p>© Taaffeite Origin 2026 · All rights reserved.</p>
+            <p>Demo preview</p>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <!-- Cart drawer and mobile menu: site.js shows these when the Cart / Menu buttons are pressed. -->
+    <template id="tpl-cart-drawer">
+      <div class="sf-drawer-backdrop" role="presentation">
+        <aside class="sf-drawer" role="dialog" aria-modal="true" aria-labelledby="cart-title">
+          <div class="sf-drawer-head">
+            <h2 id="cart-title">Your cart<span> ( 1 )</span></h2>
+            <button class="sf-text-btn" type="button">Close</button>
+          </div>
+          <div class="sf-drawer-items">
+            <article class="sf-cart-item">
+              <img
+                alt=""
+                src="assets/products/DSC01864.webp"
+              />
+              <div>
+                <div class="sf-cart-item-top">
+                  <h3>Blue Sapphire</h3>
+                  <strong>$5,400</strong>
+                </div>
+                <p>Sri Lanka · 3.42 ct</p>
+                <small>Certificate requested</small
+                ><small class="cart-hold-timer">Held for you · 09:24 remaining</small>
+                <div class="sf-qty">
+                  <button type="button" aria-label="Remove one Blue Sapphire"><span aria-hidden="true">−</span></button
+                  ><span>1</span
+                  ><button type="button" aria-label="Add one Blue Sapphire"><span aria-hidden="true">+</span></button>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="sf-drawer-foot">
+            <div class="sf-cart-total"><span>Illustrative subtotal</span><strong>$5,400</strong></div>
+            <button class="sf-btn sf-btn--primary sf-btn--block" type="button" data-href="checkout.html">
+              Continue to checkout
+            </button>
+            <p class="sf-fineprint">No payment details are collected and no order is placed.</p>
+          </div>
+        </aside>
+      </div>
+    </template>
+    <template id="tpl-mobile-menu">
+      <div id="sf-mobile-menu" class="sf-mobile-menu">
+        <nav aria-label="Main navigation">
+          <a href="buy-now.html" aria-current="page"
+            >Buy Now<svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-arrow-right"
+              aria-hidden="true"
+            >
+              <path d="M5 12h14"></path>
+              <path d="m12 5 7 7-7 7"></path></svg></a
+          ><a href="auctions.html"
+            >Auctions<svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-arrow-right"
+              aria-hidden="true"
+            >
+              <path d="M5 12h14"></path>
+              <path d="m12 5 7 7-7 7"></path></svg></a
+          ><a href="private-collection.html"
+            >Private Collection<svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-arrow-right"
+              aria-hidden="true"
+            >
+              <path d="M5 12h14"></path>
+              <path d="m12 5 7 7-7 7"></path></svg></a
+          ><a href="miners-path.html"
+            >Miner's Path<svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-arrow-right"
+              aria-hidden="true"
+            >
+              <path d="M5 12h14"></path>
+              <path d="m12 5 7 7-7 7"></path></svg></a
+          ><a href="contact.html"
+            >Contact Us<svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-arrow-right"
+              aria-hidden="true"
+            >
+              <path d="M5 12h14"></path>
+              <path d="m12 5 7 7-7 7"></path></svg></a
+          ><a href="account.html"
+            >Account<svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-arrow-right"
+              aria-hidden="true"
+            >
+              <path d="M5 12h14"></path>
+              <path d="m12 5 7 7-7 7"></path></svg
+          ></a>
+        </nav>
+        <div class="sf-mobile-menu-prefs">
+          <label class="sf-currency"
+            ><span>Currency</span
+            ><select>
+              <option value="USD">USD</option>
+              <option value="GBP">GBP</option>
+              <option value="LKR">LKR</option>
+            </select></label
+          ><button class="sf-text-btn" type="button" aria-pressed="false">Switch to dark theme</button>
+        </div>
+      </div>
+    </template>
+
+    <script src="site.js"></script>
+  </body>
+</html>
