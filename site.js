@@ -141,39 +141,45 @@
   // ---- Private collection preview ----
   var privateVault = document.querySelector('[data-private-vault]')
   if (privateVault) {
-    var privateProgress = document.querySelector('[data-private-progress]')
-    var privateProgressBar = document.querySelector('[data-private-progress-bar]')
     var privateVaultLabel = privateVault.querySelector('[data-private-vault-label]')
     var privateVaultSummary = privateVault.querySelector('summary')
-    if (!privateProgress || !privateProgressBar || !privateVaultLabel) {
-      console.error('Private collection preview is missing its progress elements.', privateVault)
+    var privateVaultClue = privateVault.querySelector('[data-private-vault-clue]')
+    var privatePreviewStage = 0
+
+    function updatePrivatePreview(stage) {
+      privatePreviewStage = stage
+      privateVaultClue.hidden = stage !== 1
+      privateVaultLabel.textContent = stage === 0
+        ? 'Begin'
+        : stage === 1 ? 'Reveal the stone' : 'View the stone'
+    }
+
+    if (!privateVaultLabel || !privateVaultSummary || !privateVaultClue) {
+      console.error('Private collection preview is missing its interactive elements.', privateVault)
     } else {
-      if (privateVaultSummary) {
-        privateVaultSummary.addEventListener('click', function (event) {
-          event.preventDefault()
-          if (privateVault.classList.contains('is-closing')) return
-          if (privateVault.open) {
-            privateVault.classList.add('is-closing')
-            window.setTimeout(function () {
-              privateVault.open = false
-              privateVault.classList.remove('is-closing')
-            }, 450)
-          } else {
+      privateVaultSummary.addEventListener('click', function (event) {
+        event.preventDefault()
+        if (privateVault.classList.contains('is-closing')) return
+        if (privateVault.open) {
+          privateVault.classList.add('is-closing')
+          window.setTimeout(function () {
+            privateVault.open = false
             privateVault.classList.remove('is-closing')
-            privateVault.open = true
-          }
-        })
-      }
-      privateVault.addEventListener('toggle', function () {
-        var discovered = privateVault.open
-        privateProgress.setAttribute('aria-valuenow', discovered ? '1' : '0')
-        privateProgress.setAttribute('aria-valuetext', discovered ? 'Preview revealed' : 'Preview not yet revealed')
-        privateProgressBar.style.width = discovered ? '100%' : '0%'
-        privateVaultLabel.textContent = discovered ? 'Private stone revealed' : 'Reveal the hidden stone'
+            privateVault.classList.add('has-clue')
+            updatePrivatePreview(1)
+          }, 450)
+        } else if (privatePreviewStage === 0) {
+          privateVault.classList.add('has-clue')
+          updatePrivatePreview(1)
+        } else {
+          privateVault.classList.remove('has-clue')
+          privateVault.open = true
+          updatePrivatePreview(2)
+        }
       })
+      updatePrivatePreview(0)
     }
   }
-
   // ---- Header height and scrolled state ----
   function publishHeaderHeight() {
     if (!header) return
@@ -216,8 +222,8 @@
     }
     if (!open && existing) existing.remove()
     header.classList.toggle('is-menu-open', open)
-    menuToggle.textContent = open ? 'Close' : 'Menu'
     menuToggle.setAttribute('aria-expanded', String(open))
+    menuToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu')
     updateScrolled()
   }
   if (menuToggle) menuToggle.addEventListener('click', function () { setMenu(!menuOpen) })
@@ -566,27 +572,94 @@
 
   var privateApplicationForm = document.querySelector('.vault-form')
   if (privateApplicationForm) {
-    var applicationStepButtons = Array.from(document.querySelectorAll('[data-application-step]'))
-    var applicationStepPanels = Array.from(privateApplicationForm.querySelectorAll('[data-application-panel]'))
+    var applicationProgressLabel = document.querySelector('[data-application-step-label]')
     var applicationProgressBar = document.querySelector('[data-application-progress-bar]')
     var applicationProgressFill = document.querySelector('[data-application-progress-fill]')
     var applicationSuccess = privateApplicationForm.querySelector('[data-application-success]')
+    var originalApplicationPanels = Array.from(privateApplicationForm.querySelectorAll('[data-application-panel]'))
+    var reviewPanel = originalApplicationPanels[originalApplicationPanels.length - 1]
+    var questionFields = []
+    originalApplicationPanels.slice(0, -1).forEach(function (panel) {
+      questionFields = questionFields.concat(Array.from(panel.querySelectorAll('.vault-field')))
+      panel.remove()
+    })
 
-    if (
-      applicationStepButtons.length !== 4 ||
-      applicationStepPanels.length !== 4 ||
-      !applicationProgressBar ||
-      !applicationProgressFill ||
-      !applicationSuccess
-    ) {
-      console.error('Private collection application steps are incomplete.', privateApplicationForm)
+    if (!questionFields.length || !reviewPanel || !applicationProgressLabel || !applicationProgressBar || !applicationProgressFill || !applicationSuccess) {
+      console.error('Private collection application questions are incomplete.', privateApplicationForm)
     } else {
+      var applicationQuestions = {
+        applicantType: 'Who is applying?',
+        fullName: 'What is your full name?',
+        email: 'Where should we email you?',
+        phone: 'What number can we reach you at?',
+        country: 'Which country are you in?',
+        occupation: 'What is your occupation or industry?',
+        purpose: 'Why are you interested in private access?',
+        gemstoneInterest: 'Which gemstones interest you?',
+        interestDetails: 'What are you hoping to find?',
+        collectionGoal: 'What are your collecting goals?',
+        contactPreference: 'How should we contact you?',
+        collectionNotes: 'Anything else to share?'
+      }
+      var questionPanels = []
+      var questionFragment = document.createDocumentFragment()
+
+      questionFields.forEach(function (field, index) {
+        var control = field.querySelector('input, select, textarea')
+        var questionPanel = document.createElement('section')
+        var heading = document.createElement('h2')
+        var actions = document.createElement('div')
+        var nextButton = document.createElement('button')
+        var fieldName = control && control.name
+
+        questionPanel.className = 'vault-step-panel vault-question-panel'
+        questionPanel.setAttribute('data-application-panel', String(index))
+        questionPanel.setAttribute('aria-labelledby', 'private-question-title-' + index)
+        heading.id = 'private-question-title-' + index
+        heading.tabIndex = -1
+        heading.textContent = applicationQuestions[fieldName] || 'Your details'
+        var fieldLabel = field.querySelector('.country-picker-label') || field.querySelector('span')
+        if (fieldLabel) fieldLabel.classList.add('sf-visually-hidden')
+        field.classList.add('vault-question-field')
+        questionPanel.appendChild(heading)
+        questionPanel.appendChild(field)
+
+        actions.className = 'vault-form-actions'
+        if (index > 0) {
+          var previousButton = document.createElement('button')
+          previousButton.className = 'vault-button is-secondary'
+          previousButton.type = 'button'
+          previousButton.setAttribute('data-application-previous', '')
+          previousButton.textContent = 'Back'
+          actions.appendChild(previousButton)
+        }
+        nextButton.className = 'vault-button is-primary'
+        nextButton.type = 'button'
+        nextButton.setAttribute('data-application-next', '')
+        nextButton.textContent = 'Continue'
+        actions.appendChild(nextButton)
+        questionPanel.appendChild(actions)
+        questionFragment.appendChild(questionPanel)
+        questionPanels.push(questionPanel)
+      })
+
+      reviewPanel.setAttribute('data-application-panel', String(questionPanels.length))
+      privateApplicationForm.insertBefore(questionFragment, reviewPanel)
+      var applicationStepPanels = questionPanels.concat([reviewPanel])
+      var reviewStepIndex = questionPanels.length
       var currentApplicationStep = 0
 
-      function updateApplicationProgress(percent) {
-        applicationProgressBar.setAttribute('aria-valuenow', String(percent))
-        applicationProgressBar.setAttribute('aria-valuetext', percent + '% complete')
-        applicationProgressFill.style.width = percent + '%'
+      function updateApplicationProgress(index) {
+        var reviewing = index === reviewStepIndex
+        var progress = reviewing ? 100 : Math.round(index / reviewStepIndex * 100)
+        applicationProgressLabel.textContent = reviewing
+          ? 'Review your answers'
+          : 'Question ' + (index + 1) + ' of ' + reviewStepIndex
+        applicationProgressBar.setAttribute('aria-valuenow', String(progress))
+        applicationProgressBar.setAttribute('aria-valuetext', reviewing
+          ? 'Review your answers'
+          : 'Question ' + (index + 1) + ' of ' + reviewStepIndex)
+        applicationProgressFill.style.width = progress + '%'
       }
 
       function updateApplicationReview() {
@@ -610,14 +683,8 @@
         applicationStepPanels.forEach(function (panel, panelIndex) {
           panel.hidden = panelIndex !== index
         })
-        applicationStepButtons.forEach(function (button, buttonIndex) {
-          button.classList.toggle('is-current', buttonIndex === index)
-          button.classList.toggle('is-complete', buttonIndex < index)
-          if (buttonIndex === index) button.setAttribute('aria-current', 'step')
-          else button.removeAttribute('aria-current')
-        })
-        updateApplicationProgress((index + 1) * 25)
-        if (index === 3) updateApplicationReview()
+        updateApplicationProgress(index)
+        if (index === reviewStepIndex) updateApplicationReview()
         if (moveFocus) {
           var heading = applicationStepPanels[index].querySelector('h2')
           if (heading) heading.focus()
@@ -634,11 +701,23 @@
         return false
       }
 
-      applicationStepButtons.forEach(function (button) {
-        button.addEventListener('click', function () {
-          showApplicationStep(Number(button.getAttribute('data-application-step')), true)
+      function completeApplication() {
+        for (var panelIndex = 0; panelIndex < applicationStepPanels.length; panelIndex += 1) {
+          if (!validateApplicationPanel(panelIndex)) return
+        }
+        applicationStepPanels.forEach(function (panel) { panel.hidden = true })
+        applicationSuccess.hidden = false
+        updateApplicationProgress(reviewStepIndex)
+        applicationProgressLabel.textContent = 'Complete'
+        applicationStepPanels.forEach(function (panel) {
+          panel.querySelectorAll('[data-application-previous], [data-application-next]').forEach(function (button) {
+            button.disabled = true
+          })
         })
-      })
+        var successHeading = applicationSuccess.querySelector('h2')
+        if (successHeading) successHeading.focus()
+      }
+
       privateApplicationForm.querySelectorAll('[data-application-next]').forEach(function (button) {
         button.addEventListener('click', function () {
           if (validateApplicationPanel(currentApplicationStep)) {
@@ -653,26 +732,15 @@
       })
       privateApplicationForm.addEventListener('submit', function (event) {
         event.preventDefault()
-        for (var panelIndex = 0; panelIndex < applicationStepPanels.length; panelIndex += 1) {
-          if (!validateApplicationPanel(panelIndex)) return
+        if (currentApplicationStep < reviewStepIndex) {
+          if (validateApplicationPanel(currentApplicationStep)) showApplicationStep(currentApplicationStep + 1, true)
+          return
         }
-
-        applicationStepPanels.forEach(function (panel) { panel.hidden = true })
-        applicationSuccess.hidden = false
-        applicationStepButtons.forEach(function (button) {
-          button.disabled = true
-          button.classList.add('is-complete')
-          button.classList.remove('is-current')
-          button.removeAttribute('aria-current')
-        })
-        updateApplicationProgress(100)
-        var successHeading = applicationSuccess.querySelector('h2')
-        if (successHeading) successHeading.focus()
+        completeApplication()
       })
       showApplicationStep(0, false)
     }
   }
-
   var checkoutDeliverySelect = document.querySelector('#checkout-delivery-service')
   var checkoutDeliveryOptions = Array.from(document.querySelectorAll('input[name="checkoutDeliverySummary"]'))
   if (checkoutDeliverySelect && checkoutDeliveryOptions.length) {

@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alata&amp;family=EB+Garamond:ital,wght@0,400..800;1,400..800&amp;display=swap" />
-    
+
     <link rel="stylesheet" href="styles.css" />
     <script>
       try {
@@ -26,13 +26,17 @@
         <header class="sf-header sf-header--over">
           <div class="sf-header-inner">
             <button
-              class="sf-text-btn sf-menu-toggle"
+              class="sf-icon-btn sf-menu-toggle"
               type="button"
               aria-expanded="false"
               aria-controls="sf-mobile-menu"
               aria-label="Open menu"
             >
-              Menu
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M4 7h16" />
+                <path d="M4 12h16" />
+                <path d="M4 17h16" />
+              </svg>
             </button>
             <nav class="sf-nav" aria-label="Main navigation">
               <a href="miners-path.html">Miner's Path</a><a href="buy-now.html">Buy Now</a
@@ -84,7 +88,7 @@
           </section>
           <section class="sf-signature" id="collections" aria-label="Everyday gemstone collection">
             <header class="sf-home-heading" data-reveal="true">
-              <p class="sf-kicker">The collection</p>
+
               <h2>GEMSTONES</h2>
             </header>
             <a class="sf-card sf-home-gem" href="product.html" data-reveal="true" style="--reveal-i: 0"
@@ -216,20 +220,10 @@
           <section class="sf-private-teaser" aria-labelledby="private-teaser-title">
             <div class="sf-wrap sf-private-teaser-inner">
               <div class="sf-private-teaser-copy">
-                <p class="sf-private-teaser-kicker"><span>Private collection</span></p>
-                <h2 id="private-teaser-title">PRIVATE COLLECTION</h2>
-                <p>Explore rare stones reserved for private viewing.</p>
-                <div
-                  class="sf-private-progress"
-                  role="progressbar"
-                  aria-label="Private preview discovery"
-                  aria-valuemin="0"
-                  aria-valuemax="1"
-                  aria-valuenow="0"
-                  aria-valuetext="Preview not yet revealed"
-                  data-private-progress
-                ><span data-private-progress-bar></span></div>
-                <p class="sf-private-teaser-note">Preview only. Details subject to confirmation.</p>
+
+                <p class="sf-private-teaser-kicker">Private collection</p>
+                <h2 id="private-teaser-title">A rare stone awaits.</h2>
+                <p>Discover a piece from Sri Lanka.</p>
               </div>
               <details class="sf-private-vault" data-private-vault>
                 <summary>
@@ -240,8 +234,9 @@
                     </svg>
                   </span>
                   <span class="sf-private-vault-prompt">
-                    <small>Private preview</small>
-                    <strong data-private-vault-label>Reveal stone</strong>
+                    <small>Discover</small>
+                    <strong data-private-vault-label>Begin</strong>
+                    <span class="sf-private-vault-clue" data-private-vault-clue hidden>A violet rarity from Sri Lanka.</span>
                   </span>
                 </summary>
                 <div class="sf-private-vault-reveal">
@@ -254,7 +249,7 @@
                     <figcaption>Preview</figcaption>
                   </figure>
                   <div class="sf-private-vault-details">
-                    <p class="sf-private-vault-kicker">Discovery complete</p>
+                    <p class="sf-private-vault-kicker">Private collection</p>
                     <h3>Collector Taaffeite</h3>
                     <p>Sri Lanka <span aria-hidden="true">·</span> 0.84 ct</p>
                     <a class="sf-private-join" href="private-collection.html">
@@ -371,7 +366,6 @@
               <a class="sf-footer-brand" href="home.html" aria-label="Taaffeite Origin home">
                 <span>Taaffeite Origin</span>
               </a>
-              <p class="sf-footer-description">Rare gemstones. Rooted in Sri Lanka.</p>
               <h2 class="sf-footer-social-title">Socials</h2>
               <div class="sf-footer-social-links" role="group" aria-label="Social channels">
                 <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer" aria-label="LinkedIn (opens in a new tab)"><img src="assets/social/linkedin.svg" alt="" /></a>

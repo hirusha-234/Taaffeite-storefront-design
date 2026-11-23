@@ -87,20 +87,12 @@
             >
             <p class="eyebrow">Private collection</p>
             <h1 id="vault-page-title">Request private access</h1>
-            <p>Apply for an introduction to the private collection. Each request is reviewed individually.</p>
+            <p>Tell us about yourself. Every request is reviewed.</p>
           </section>
           <div class="vault-content section-wrap">
-            <nav class="vault-step-nav" aria-label="Application steps">
-              <button type="button" class="vault-step is-current" aria-current="step" data-application-step="0">
-                <span class="vault-step-marker">1</span><span>Introduction</span></button
-              ><button type="button" class="vault-step" data-application-step="1">
-                <span class="vault-step-marker">2</span><span>Interest</span></button
-              ><button type="button" class="vault-step" data-application-step="2">
-                <span class="vault-step-marker">3</span><span>Collection</span></button
-              ><button type="button" class="vault-step" data-application-step="3">
-                <span class="vault-step-marker">4</span><span>Review</span>
-              </button>
-            </nav>
+            <div class="vault-step-nav" aria-live="polite">
+              <span data-application-step-label>Question 1 of 12</span>
+            </div>
             <section class="vault-form-panel" aria-label="Private collection application form">
               <div class="vault-application-progress">
                 <div
@@ -109,17 +101,17 @@
                   aria-label="Application progress"
                   aria-valuemin="0"
                   aria-valuemax="100"
-                  aria-valuenow="25"
-                  aria-valuetext="25% complete"
+                  aria-valuenow="0"
+                  aria-valuetext="Question 1 of 12"
                   data-application-progress-bar
                 >
-                  <span data-application-progress-fill style="width: 25%"></span>
+                  <span data-application-progress-fill style="width: 0%"></span>
                 </div>
               </div>
               <form class="vault-form" novalidate>
                 <section class="vault-step-panel" data-application-panel="0" aria-labelledby="introduction-step-title">
                   <p class="vault-micro-label">Step 1 of 4</p>
-                  <h2 id="introduction-step-title" tabindex="-1">Begin with an introduction</h2>
+                  <h2 id="introduction-step-title" tabindex="-1">Your details</h2>
                   <div class="vault-form-grid">
                     <label class="vault-field span-two"
                       ><span>Applicant type *</span
@@ -198,7 +190,7 @@
                 </section>
                 <section class="vault-step-panel" data-application-panel="1" aria-labelledby="interest-step-title" hidden>
                   <p class="vault-micro-label">Step 2 of 4</p>
-                  <h2 id="interest-step-title" tabindex="-1">Tell us about your interests</h2>
+                  <h2 id="interest-step-title" tabindex="-1">Your interests</h2>
                   <div class="vault-form-grid">
                     <label class="vault-field span-two"
                       ><span>Primary area of interest *</span
@@ -292,8 +284,8 @@
                 <img alt="Violet gemstones arranged in soft natural light" src="assets/taaffeite-home-hero.jpg" />
                 <figcaption>Violet taaffeite, Sri Lanka</figcaption>
               </figure>
-              <h3>A considered process</h3>
-              <p>Four short steps. Move between them at any time without losing what you have entered.</p>
+              <h3>One question at a time</h3>
+              <p>Review your answers before you submit.</p>
             </aside>
           </div>
         </main>
@@ -308,7 +300,6 @@
               <a class="sf-footer-brand" href="home.html" aria-label="Taaffeite Origin home">
                 <span>Taaffeite Origin</span>
               </a>
-              <p class="sf-footer-description">Rare gemstones. Rooted in Sri Lanka.</p>
               <h2 class="sf-footer-social-title">Socials</h2>
               <div class="sf-footer-social-links" role="group" aria-label="Social channels">
                 <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer" aria-label="LinkedIn (opens in a new tab)"><img src="assets/social/linkedin.svg" alt="" /></a>

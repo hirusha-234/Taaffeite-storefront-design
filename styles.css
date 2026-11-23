@@ -1930,7 +1930,7 @@ a:hover .sf-img img, .sf-img:hover img { transform: scale(1.03); }
 .sf-feature .sf-card--lead { width: 100%; display: flex; flex-direction: column; }
 .sf-card--lead .sf-card-media { aspect-ratio: 1 / 1; }
 .sf-card--lead .sf-card-body { padding-top: 20px; grid-template-columns: minmax(0, 1fr) auto; align-items: end; column-gap: 24px; }
-.sf-card--lead .sf-card-name { font-size: var(--t-h2); line-height: 1; }
+.sf-card--lead .sf-card-name { font-size: 16px; line-height: 1.05; }
 .sf-card--lead .sf-card-meta { grid-column: 1; }
 .sf-card--lead .sf-card-price { grid-column: 2; grid-row: 1 / span 2; align-self: end; margin: 0; }
 
@@ -2710,7 +2710,7 @@ a.sf-partner:hover img { filter: none; opacity: 1; }
 .sf-card-media { border-radius: 11px 11px 0 0; }
 .sf-card-body { padding: 12px 14px 15px; }
 .sf-card--lead .sf-card-body { padding: 16px 18px 18px; }
-.sf-card--lead .sf-card-name { font-size: clamp(24px, 2.5vw, 36px); }
+.sf-card--lead .sf-card-name { font-size: 16px; }
 .sf-card-name { font-size: var(--t-lead); }
 
 .sf-split { margin-top: clamp(72px, 8vw, 112px); }
@@ -2936,7 +2936,7 @@ a.sf-partner:hover img { filter: none; opacity: 1; }
   align-items: flex-start;
   gap: 3px;
 }
-.sf-home .sf-feature .sf-card--lead .sf-card-name { font-size: var(--t-lead); }
+.sf-home .sf-feature .sf-card--lead .sf-card-name { font-size: 16px; }
 
 .sf-home .sf-split { margin-top: clamp(64px, 8vw, 104px); }
 .sf-home .sf-split-quote { background: color-mix(in srgb, var(--sf-accent) 5%, var(--sf-surface)); }
@@ -3265,7 +3265,7 @@ a.sf-partner:hover img { filter: none; opacity: 1; }
   position: absolute;
   top: 0;
   left: 50%;
-  width: 100vw;
+  width: 100%;
   height: 1px;
   transform: translateX(-50%);
   background: linear-gradient(
@@ -3678,14 +3678,14 @@ a.sf-partner:hover img { filter: none; opacity: 1; }
     padding: 30px var(--sf-gutter);
   }
   .sf-home .sf-home-heading { grid-column: 1 / -1; }
-  .sf-home .sf-home-gem .sf-card-name { font-size: 14px; }
+  .sf-home .sf-home-gem .sf-card-name { font-size: 16px; }
   .sf-home > .sf-section { padding-block: 34px; }
   .sf-home .sf-section-head {
     align-items: flex-start;
     gap: 12px;
   }
   .sf-home .sf-feature { gap: 18px 10px; }
-  .sf-home .sf-feature .sf-card-name { font-size: 14px; }
+  .sf-home .sf-feature .sf-card-name { font-size: 16px; }
   .sf-private-teaser { margin-top: 12px; padding-block: 42px; }
   .sf-private-teaser-inner { grid-template-columns: 1fr; gap: 26px; }
   .sf-private-teaser-copy { max-width: 620px; }
@@ -4444,7 +4444,7 @@ a.sf-partner:hover img { filter: none; opacity: 1; }
 }
 
 .archive-site .sf-card--lead .sf-card-name {
-  font-size: clamp(22px, 2.2vw, 42px);
+  font-size: 16px;
 }
 
 .archive-site .sf-info h1 {
@@ -5722,4 +5722,63 @@ main:not(.sf-home) + .sf-footer { margin-top: clamp(32px, 6vw, 88px); }
 .archive-site .sf-home .sf-feature .sf-card--lead .sf-card-name {
   font-size: 16px;
   line-height: 1.05;
+}
+/* Let the homepage feature band span the page; its inner content owns the gutter. */
+.archive-site .sf-home > .sf-section.sf-wrap {
+  width: 100%;
+  max-width: none;
+  margin-inline: 0;
+}
+/* One-question private-access flow */
+.vault-step-nav {
+  min-height: 36px;
+  align-items: center;
+  color: var(--sf-muted);
+  font: 500 var(--t-small)/1.4 var(--sf-sans);
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+.vault-question-panel {
+  min-height: 300px;
+  align-content: start;
+}
+.vault-question-panel > .vault-question-field {
+  width: 100%;
+  max-width: min(100%, 560px);
+  margin-top: 8px;
+}
+.sf-private-vault.has-clue {
+  border-color: rgb(231 212 255 / .48);
+}
+.sf-private-vault-clue[hidden] { display: none; }
+.sf-private-vault-clue:not([hidden]) {
+  display: block;
+  max-width: 36ch;
+  color: rgb(247 242 250 / .72);
+  font: 400 var(--t-small)/1.45 var(--sf-sans);
+  animation: sf-fade .35s ease-out both;
+}
+/* Compact icon control for the mobile navigation. */
+@media (max-width: 1199px) {
+  .sf-header .sf-menu-toggle {
+    width: 44px;
+    height: 44px;
+    justify-self: start;
+  }
+  .sf-menu-toggle svg {
+    width: 21px;
+    height: 21px;
+    overflow: visible;
+  }
+  .sf-menu-toggle svg path {
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.5;
+    stroke-linecap: round;
+    transition: transform .2s ease, opacity .2s ease;
+    transform-origin: 12px 12px;
+  }
+  .sf-menu-toggle[aria-expanded="true"] svg path:first-child { transform: translateY(5px) rotate(45deg); }
+  .sf-menu-toggle[aria-expanded="true"] svg path:nth-child(2) { opacity: 0; }
+  .sf-menu-toggle[aria-expanded="true"] svg path:last-child { transform: translateY(-5px) rotate(-45deg); }
 }
