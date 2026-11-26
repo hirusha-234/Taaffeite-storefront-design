@@ -188,7 +188,6 @@
     html.style.setProperty('--sf-header-h', height)
   }
   var menuOpen = false
-  var heroCopy = site && site.querySelector('.sf-splash-copy')
   var splashVideo = site && site.querySelector('.sf-splash video.sf-splash-media')
   if (splashVideo) {
     var motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)')
@@ -216,13 +215,6 @@
       ? window.scrollY >= scrollThreshold - thresholdBuffer
       : window.scrollY >= scrollThreshold + thresholdBuffer)
     header.classList.toggle('is-scrolled', Boolean(pastHero) || (!hero && window.scrollY > 8) || menuOpen)
-    if (heroCopy && hero) {
-      var fadeDistance = Math.min(220, hero.offsetHeight * 0.3)
-      var progress = Math.min(1, Math.max(0, window.scrollY / fadeDistance))
-      heroCopy.style.setProperty('--hero-copy-opacity', String(1 - progress))
-      heroCopy.style.setProperty('--hero-copy-offset', (progress * -24) + 'px')
-      heroCopy.style.pointerEvents = progress > 0.65 ? 'none' : ''
-    }
   }
   publishHeaderHeight()
   updateScrolled()

@@ -3172,16 +3172,6 @@ a.sf-partner:hover img { filter: none; opacity: 1; }
 .sf-home .sf-splash-copy {
   padding: 0 0 clamp(32px, 5vw, 64px);
   color: #fff;
-  opacity: var(--hero-copy-opacity, 1);
-  transform: translateY(var(--hero-copy-offset, 0));
-  transition: opacity .08s linear, transform .08s linear;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .sf-home .sf-splash-copy {
-    transform: none;
-    transition: none;
-  }
 }
 
 .sf-home .sf-splash-copy > .sf-kicker {
@@ -4157,7 +4147,7 @@ a.sf-partner:hover img { filter: none; opacity: 1; }
 .archive-site:has(.sf-home) .sf-header--over.is-scrolled {
   background: #fff;
   border-bottom-color: color-mix(in srgb, #bba8eb 24%, var(--sf-line));
-  box-shadow: 0 5px 22px rgb(83 55 95 / .06), 0 1px 12px rgb(255 227 217 / .2);
+  box-shadow: none;
   color: var(--sf-ink);
   -webkit-backdrop-filter: none;
   backdrop-filter: none;
@@ -4182,13 +4172,6 @@ a.sf-partner:hover img { filter: none; opacity: 1; }
 
 .archive-site:has(.sf-home) .sf-header--over.is-scrolled .sf-cart-toggle::after {
   background: #291049;
-  color: #fff;
-}
-
-.archive-site:has(.sf-home) .sf-header--over:not(.is-scrolled) .sf-header-inner > .sf-nav a:hover,
-.archive-site:has(.sf-home) .sf-header--over:not(.is-scrolled) .sf-header-inner > .sf-nav a:focus-visible {
-  border-color: rgb(255 255 255 / .55);
-  background: rgb(255 255 255 / .14);
   color: #fff;
 }
 
@@ -6557,12 +6540,82 @@ main:not(.sf-home) + .sf-footer { margin-top: clamp(32px, 6vw, 88px); }
 /* Keep the user-supplied homepage video natural under the shared hero overlay. */
 .archive-site .sf-home .sf-splash video.sf-splash-media {
   object-position: center;
-  transform: scale(1.035);
   mix-blend-mode: normal;
+  filter: none;
+  opacity: 1;
+  transform: none;
+  animation: none;
 }
 
-.archive-site .sf-home .sf-splash::after {
-  background:
-    linear-gradient(0deg, rgb(16 9 20 / .76) 0%, rgb(16 9 20 / .32) 48%, rgb(16 9 20 / .16) 100%),
-    linear-gradient(90deg, rgb(16 9 20 / .28), transparent 72%);
+.archive-site .sf-home .sf-splash::after,
+.archive-site[data-theme="dark"] .sf-home .sf-splash::after {
+  background: linear-gradient(
+    180deg,
+    rgb(18 10 24 / .06) 0%,
+    rgb(18 10 24 / .08) 34%,
+    rgb(18 10 24 / .34) 62%,
+    rgb(10 6 14 / .82) 100%
+  );
+}
+
+.archive-site .sf-home .sf-splash,
+.archive-site[data-theme="dark"] .sf-home .sf-splash {
+  background-color: #1b0919;
+  background-image: none;
+}
+
+.archive-site .sf-home .sf-splash-mark {
+  text-shadow: none;
+}
+
+/* Restore the white masthead on hover without changing its geometry. */
+.archive-site:has(.sf-home) .sf-header--over:not(.is-scrolled):hover {
+  background: #fff;
+  border-bottom-color: var(--sf-line);
+  box-shadow: none;
+  color: #291049;
+}
+
+.archive-site:has(.sf-home) .sf-header--over:not(.is-scrolled):hover .sf-header-inner {
+  --sf-ink: #291049;
+  --sf-accent: #291049;
+  --sf-accent-hover: #1b0919;
+}
+
+.archive-site:has(.sf-home) .sf-header--over:not(.is-scrolled):hover .sf-logo-image,
+.archive-site:has(.sf-home) .sf-header--over:not(.is-scrolled):hover .sf-account-link::before,
+.archive-site:has(.sf-home) .sf-header--over:not(.is-scrolled):hover .sf-cart-toggle::before,
+.archive-site:has(.sf-home) .sf-header--over:not(.is-scrolled):hover .sf-theme-toggle::before {
+  filter: none;
+}
+
+.archive-site:has(.sf-home) .sf-header--over:not(.is-scrolled):hover .sf-nav a,
+.archive-site:has(.sf-home) .sf-header--over:not(.is-scrolled):hover .sf-actions > *,
+.archive-site:has(.sf-home) .sf-header--over:not(.is-scrolled):hover .sf-menu-toggle {
+  text-shadow: none;
+}
+
+.archive-site:has(.sf-home) .sf-header--over:not(.is-scrolled):hover .sf-currency select {
+  color: #291049;
+}
+
+.archive-site:has(.sf-home) .sf-header--over:not(.is-scrolled):hover .sf-cart-toggle::after {
+  background: #291049;
+  color: #fff;
+}
+
+/* Keep hero copy stationary as the video and its full-frame overlay scroll. */
+.archive-site .sf-home .sf-splash-copy {
+  opacity: 1;
+  transform: none;
+  transition: none;
+}
+
+.archive-site .sf-newsletter-form input {
+  font-family: var(--sf-sans);
+  font-size: var(--sf-action-size);
+  font-weight: var(--sf-action-weight);
+  letter-spacing: var(--sf-action-tracking);
+  line-height: 1;
+  text-transform: none;
 }
