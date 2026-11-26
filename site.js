@@ -9,6 +9,56 @@
   var header = document.querySelector('.sf-header')
   var here = location.pathname.split('/').pop() || 'index.html'
 
+  // Keep the invitation open during its closing motion so the envelope and letter
+  // can fold away together before the native details panel is hidden.
+  var invite = document.querySelector('.sf-invite-details')
+  if (invite) {
+    var inviteTrigger = invite.querySelector('summary')
+    var inviteLetter = invite.querySelector('.sf-invite-letter')
+    var inviteState = 'closed'
+    var inviteFinishTimer
+
+    function finishInviteMotion() {
+      if (inviteState === 'opening') {
+        inviteState = 'open'
+      } else if (inviteState === 'closing') {
+        invite.open = false
+        invite.classList.remove('is-closing')
+        inviteLetter.inert = false
+        inviteState = 'closed'
+      }
+    }
+
+    inviteTrigger.setAttribute('aria-expanded', 'false')
+    inviteTrigger.addEventListener('click', function (event) {
+      event.preventDefault()
+      if (inviteState === 'opening' || inviteState === 'closing') return
+
+      clearTimeout(inviteFinishTimer)
+      if (inviteState === 'closed') {
+        invite.open = true
+        inviteLetter.inert = false
+        inviteTrigger.setAttribute('aria-expanded', 'true')
+        inviteState = 'opening'
+        requestAnimationFrame(function () { invite.classList.add('is-open') })
+      } else {
+        inviteTrigger.setAttribute('aria-expanded', 'false')
+        inviteLetter.inert = true
+        invite.classList.remove('is-open')
+        invite.classList.add('is-closing')
+        inviteState = 'closing'
+      }
+      inviteFinishTimer = setTimeout(finishInviteMotion, 1000)
+    })
+
+    inviteLetter.addEventListener('animationend', function (event) {
+      if (event.target === inviteLetter && event.animationName === 'sf-invite-open') {
+        clearTimeout(inviteFinishTimer)
+        finishInviteMotion()
+      }
+    })
+  }
+
   // ---- Theme ----
   function applyTheme(dark) {
     html.dataset.theme = dark ? 'dark' : 'light'
