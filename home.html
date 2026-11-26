@@ -71,12 +71,17 @@
         </header>
         <main class="sf-home">
           <section class="sf-splash" aria-labelledby="hero-title">
-            <img
+            <video
               class="sf-splash-media"
-              alt="Violet taaffeite gemstones glowing against a dark background"
-              fetchpriority="high"
-              src="assets/taaffeite-hero.png"
-            />
+              muted
+              loop
+              playsinline
+              preload="metadata"
+              poster="assets/taaffeite-hero.png"
+              aria-hidden="true"
+            >
+              <source src="assets/video/home.mp4" type="video/mp4" />
+            </video>
             <div class="sf-splash-copy">
               <p class="sf-kicker">Taaffeite Origin · Sri Lanka</p>
               <h1 id="hero-title" class="sf-splash-mark">A WORLD OF RARE GEMS</h1>
@@ -369,9 +374,8 @@
           </section>
           <section class="sf-home-newsletter" aria-labelledby="newsletter-title">
             <div class="sf-wrap sf-newsletter-panel">
-              <p class="sf-newsletter-kicker">Taaffeite Origin</p>
-              <h2 id="newsletter-title">Newsletter</h2>
-              <p class="sf-newsletter-copy">Gemstones, sourcing and stories from Taaffeite Origin.</p>
+              <h2 id="newsletter-title">Notes from the origin</h2>
+              <p class="sf-newsletter-copy">New stones and stories from Sri Lanka, occasionally.</p>
               <form class="sf-newsletter-form" data-newsletter-form>
                 <label class="sf-visually-hidden" for="newsletter-email">Email address</label>
                 <input
@@ -380,7 +384,7 @@
                   type="email"
                   autocomplete="email"
                   placeholder="Your email address"
-                  aria-describedby="newsletter-note newsletter-status"
+                  aria-describedby="newsletter-status"
                   required
                 />
                 <button class="sf-newsletter-submit" type="submit">
@@ -390,14 +394,11 @@
                   </svg>
                 </button>
               </form>
-              <p class="sf-newsletter-note" id="newsletter-note">
-                Preview only — sign-ups are not stored or sent.
-              </p>
               <p class="sf-newsletter-status" id="newsletter-status" data-newsletter-status role="status" aria-live="polite"></p>
             </div>
           </section>
         </main>
-                                <footer class="sf-footer">
+        <footer class="sf-footer">
           <img class="sf-footer-ghost" src="assets/taaffeite-origin-logo.png" alt="" aria-hidden="true" />
           <div class="sf-wrap sf-footer-hero">
             <h2 class="sf-footer-title">Rare gemstones</h2>
@@ -440,7 +441,6 @@
               <div class="sf-footer-contact-list">
                 <p>Colombo, Sri Lanka</p>
                 <p><a href="mailto:support@taaffeite.com">support@taaffeite.com</a></p>
-                <p>Details available when live contact is connected</p>
                 <a class="sf-footer-contact-link" href="contact.html">Contact form<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M8 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg></a>
               </div>
             </div>
@@ -454,7 +454,6 @@
           </div>
           <div class="sf-wrap sf-footer-bottom">
             <p>© Taaffeite Origin 2026 · All rights reserved.</p>
-            <p>Demo preview</p>
           </div>
         </footer>
       </div>

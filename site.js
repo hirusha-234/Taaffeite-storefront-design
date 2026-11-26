@@ -189,10 +189,32 @@
   }
   var menuOpen = false
   var heroCopy = site && site.querySelector('.sf-splash-copy')
+  var splashVideo = site && site.querySelector('.sf-splash video.sf-splash-media')
+  if (splashVideo) {
+    var motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)')
+    function syncSplashVideo() {
+      if (motionPreference.matches) {
+        splashVideo.pause()
+      } else {
+        splashVideo.play().catch(function () {})
+      }
+    }
+    syncSplashVideo()
+    if (motionPreference.addEventListener) {
+      motionPreference.addEventListener('change', syncSplashVideo)
+    } else if (motionPreference.addListener) {
+      motionPreference.addListener(syncSplashVideo)
+    }
+  }
   function updateScrolled() {
     if (!header) return
     var hero = site && site.querySelector('.sf-splash')
-    var pastHero = hero && window.scrollY >= hero.offsetHeight - header.offsetHeight
+    var wasScrolled = header.classList.contains('is-scrolled')
+    var scrollThreshold = hero && hero.offsetHeight - header.offsetHeight
+    var thresholdBuffer = 48
+    var pastHero = hero && (wasScrolled
+      ? window.scrollY >= scrollThreshold - thresholdBuffer
+      : window.scrollY >= scrollThreshold + thresholdBuffer)
     header.classList.toggle('is-scrolled', Boolean(pastHero) || (!hero && window.scrollY > 8) || menuOpen)
     if (heroCopy && hero) {
       var fadeDistance = Math.min(220, hero.offsetHeight * 0.3)
