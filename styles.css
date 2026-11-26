@@ -5358,6 +5358,38 @@ main:not(.sf-home) + .sf-footer { margin-top: clamp(32px, 6vw, 88px); }
   text-transform: none;
 }
 
+/* Center the homepage hero message as a single composition. */
+.archive-site .sf-home .sf-splash-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.archive-site .sf-home .sf-splash-mark {
+  margin-inline: auto;
+  text-align: center;
+}
+
+.archive-site .sf-home .sf-splash-line {
+  justify-content: center;
+  justify-items: center;
+  text-align: center;
+}
+
+.archive-site .sf-home .sf-splash-cta {
+  align-self: center;
+}
+
+/* Keep the brand introduction's visible whitespace balanced after its link was removed. */
+.archive-site .sf-home > .sf-intro {
+  padding-block: var(--home-section-space);
+}
+
+.archive-site .sf-home .sf-intro-lead p {
+  margin-bottom: 0;
+}
+
 .archive-site .sf-home .sf-split-quote h2 {
   font-family: var(--sf-serif);
   text-transform: none;
