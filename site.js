@@ -52,7 +52,7 @@
     })
 
     inviteLetter.addEventListener('animationend', function (event) {
-      if (event.target === inviteLetter && event.animationName === 'sf-invite-open') {
+      if (event.target === inviteLetter && (event.animationName === 'sf-invite-open' || event.animationName === 'sf-invite-close')) {
         clearTimeout(inviteFinishTimer)
         finishInviteMotion()
       }
